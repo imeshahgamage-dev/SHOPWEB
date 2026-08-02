@@ -14,13 +14,14 @@
             --primary-pink: #ff2a85;
             --light-pink: #ff75bc;
             --pale-pink: rgba(255, 182, 215, 0.25);
-            --glass-bg: rgba(255, 255, 255, 0.15);
-            --glass-border: rgba(255, 255, 255, 0.3);
+            --glass-bg: rgba(20, 6, 16, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.18);
             --text-color: #fff;
             --dark-text: #2c2c2c;
         }
+        html { background: #2d0f23; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
-        body { background: linear-gradient(135deg, #1a0b14 0%, #3d122d 50%, #5c1843 100%); color: var(--text-color); min-height: 100vh; overflow-x: hidden; position: relative; }
+        body { background: #2d0f23; background: linear-gradient(135deg, #1a0b14 0%, #3d122d 50%, #5c1843 100%); background-attachment: fixed; color: var(--text-color); min-height: 100vh; overflow-x: hidden; position: relative; }
         .bg-glow { position: fixed; width: 400px; height: 400px; background: rgba(255, 42, 133, 0.3); filter: blur(120px); border-radius: 50px; z-index: -1; animation: floatGlow 10s infinite alternate; }
         .bg-glow-2 { top: 60%; right: -100px; background: rgba(255, 117, 188, 0.2); animation: floatGlow 15s infinite alternate-reverse; }
         @keyframes floatGlow { 0% { transform: translateY(0) scale(1); } 100% { transform: translateY(-50px) scale(1.2); } }
