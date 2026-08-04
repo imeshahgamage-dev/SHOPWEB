@@ -134,6 +134,10 @@
             <button class="action-btn" onclick="openWhatsApp()"><i class="fa-brands fa-whatsapp" style="font-size:1.2rem;color:#25d366;"></i><span id="whatsappBtnLabel">WhatsApp</span></button>
             <button class="action-btn" onclick="makeCall()"><i class="fa-solid fa-phone" style="color:#4cd137;"></i><span id="callBtnLabel">Call Us</span></button>
             <button class="action-btn" onclick="openLocation()"><i class="fa-solid fa-location-dot" style="color:#ff4757;"></i><span id="locationBtnLabel">Location</span></button>
+            <div class="settings-icon-btn" id="cartIconBtn" onclick="openCartModal()" title="Cart" style="position:relative;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCountBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:var(--primary-pink);color:#fff;font-size:0.7rem;font-weight:700;min-width:20px;height:20px;border-radius:10px;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 0 8px var(--primary-pink);">0</span>
+            </div>
             <div class="settings-icon-btn" onclick="openPasswordModal()" title="Admin Settings"><i class="fa-solid fa-gear"></i></div>
         </div>
     </header>
@@ -175,7 +179,20 @@
             <div class="product-price" id="detailPrice" style="margin-bottom:10px;"></div>
             <div class="product-details" id="detailDetails" style="margin-bottom:15px;"></div>
             <div class="product-payment-box" id="detailBankBox"></div>
-            <a href="#" id="detailOrderBtn" target="_blank" class="order-btn" style="display:block;margin-top:15px;"><i class="fa-brands fa-whatsapp"></i> ඇණවුම් කරන්න</a>
+            <div style="display:flex;gap:10px;margin-top:15px;">
+                <button id="detailAddToCartBtn" class="order-btn" style="background:linear-gradient(135deg,#6c3fc5,#a54fd6);" onclick="addToCart(currentDetailProductId)"><i class="fa-solid fa-cart-plus"></i> කාට් එකට එකතු කරන්න</button>
+                <a href="#" id="detailOrderBtn" target="_blank" class="order-btn"><i class="fa-brands fa-whatsapp"></i> ඇණවුම් කරන්න</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-box wide">
+            <div class="modal-header"><h2><i class="fa-solid fa-cart-shopping"></i> මගේ කාට් එක</h2><button class="close-modal" onclick="closeModal('cartModal')">&times;</button></div>
+            <div id="cartItemsList"></div>
+            <p id="cartEmptyMsg" style="color:#ddd;text-align:center;padding:20px 0;display:none;">කාට් එකේ මොනවත් නෑ. Product එකක් open කරලා "කාට් එකට එකතු කරන්න" click කරන්න.</p>
+            <button class="submit-btn" onclick="orderSelectedCartItems()" id="cartOrderBtn"><i class="fa-brands fa-whatsapp"></i> තෝරාගත් අයිතම ඇණවුම් කරන්න</button>
         </div>
     </div>
 
@@ -350,6 +367,7 @@
         loadContactSettingsToForm();
         if (Object.keys(banks).length) { populateBankDropdown(); renderBankSummary(); }
         if (Object.keys(products).length) { renderProducts(); }
+        updateCartBadge();
 
         // ---- Firebase connection status ----
         db.ref('.info/connected').on('value', (snap) => {
@@ -546,9 +564,14 @@
             card.querySelectorAll('.dot').forEach((dot, idx) => dot.classList.toggle('active', idx === imageIndex));
         }
 
+        let currentDetailProductId = null;
+        let currentDetailImageIndex = 0;
+
         function openDetailModal(pId) {
             const prod = products[pId];
             if (!prod) return;
+            currentDetailProductId = pId;
+            currentDetailImageIndex = 0;
             const bankInfo = (banks && banks[prod.bankId]) || Object.values(banks || {})[0] || {};
             document.getElementById('detailModalTitle').innerHTML = `<i class="fa-solid fa-shirt"></i> ${prod.name}`;
             document.getElementById('detailPrice').innerText = prod.price;
@@ -560,6 +583,91 @@
             document.getElementById('detailOrderBtn').href = `https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent('I want to order sample: ' + prod.name)}`;
             document.getElementById('detailOrderBtn').innerHTML = `<i class="fa-brands fa-whatsapp"></i> ${texts.orderLabel}`;
             document.getElementById('detailModal').classList.add('active');
+        }
+
+        function moveDetailImage(direction) {
+            if (!currentDetailProductId) return;
+            const prod = products[currentDetailProductId];
+            if (!prod || !prod.images || prod.images.length < 2) return;
+            const imgs = document.querySelectorAll('#detailGallery img');
+            if (!imgs.length) return;
+            currentDetailImageIndex = (currentDetailImageIndex + direction + imgs.length) % imgs.length;
+            imgs.forEach((img, i) => img.classList.toggle('active', i === currentDetailImageIndex));
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('detailModal').classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') moveDetailImage(-1);
+            if (e.key === 'ArrowRight') moveDetailImage(1);
+        });
+
+        // ---- Cart ----
+        function getCart() { try { return JSON.parse(localStorage.getItem('tb_cart') || '[]'); } catch(e) { return []; } }
+        function saveCart(cart) { localStorage.setItem('tb_cart', JSON.stringify(cart)); updateCartBadge(); }
+
+        function updateCartBadge() {
+            const cart = getCart();
+            const badge = document.getElementById('cartCountBadge');
+            if (cart.length > 0) { badge.style.display = 'flex'; badge.innerText = cart.length; }
+            else { badge.style.display = 'none'; }
+        }
+
+        function addToCart(pId) {
+            if (!pId) return;
+            const prod = products[pId];
+            if (!prod) return;
+            let cart = getCart();
+            if (cart.find(c => c.id === pId)) { alert('මේ නිෂ්පාදනය දැනටමත් කාට් එකේ තියෙනවා.'); return; }
+            cart.push({ id: pId, name: prod.name, price: prod.price, image: (prod.images || [])[0] || '' });
+            saveCart(cart);
+            alert('කාට් එකට එකතු කරන ලදී!');
+        }
+
+        function removeFromCart(pId) {
+            let cart = getCart().filter(c => c.id !== pId);
+            saveCart(cart);
+            renderCart();
+        }
+
+        function renderCart() {
+            const cart = getCart();
+            const list = document.getElementById('cartItemsList');
+            const emptyMsg = document.getElementById('cartEmptyMsg');
+            const orderBtn = document.getElementById('cartOrderBtn');
+            list.innerHTML = '';
+            if (cart.length === 0) {
+                emptyMsg.style.display = 'block';
+                orderBtn.style.display = 'none';
+                return;
+            }
+            emptyMsg.style.display = 'none';
+            orderBtn.style.display = 'block';
+            cart.forEach(item => {
+                const row = document.createElement('div');
+                row.className = 'product-payment-box';
+                row.style.marginBottom = '12px';
+                row.innerHTML = `
+                    <input type="checkbox" class="cart-item-checkbox" data-id="${item.id}" checked style="width:20px;height:20px;flex-shrink:0;">
+                    <img src="${item.image}" style="width:55px;height:55px;object-fit:cover;border-radius:8px;flex-shrink:0;">
+                    <div class="product-bank-text" style="flex-grow:1;"><div style="font-weight:700;color:var(--light-pink);">${item.name}</div><div>${item.price}</div></div>
+                    <button onclick="removeFromCart('${item.id}')" style="background:none;border:none;color:#ff6b81;font-size:1.1rem;cursor:pointer;flex-shrink:0;"><i class="fa-solid fa-trash"></i></button>`;
+                list.appendChild(row);
+            });
+        }
+
+        function openCartModal() {
+            renderCart();
+            document.getElementById('cartModal').classList.add('active');
+        }
+
+        function orderSelectedCartItems() {
+            const cart = getCart();
+            const checked = Array.from(document.querySelectorAll('.cart-item-checkbox:checked')).map(c => c.dataset.id);
+            const selected = cart.filter(c => checked.includes(c.id));
+            if (selected.length === 0) { alert('කරුණාකර අවම වශයෙන් එක් අයිතමයක්වත් තෝරන්න.'); return; }
+            let msg = 'I want to order the following samples:\n\n';
+            selected.forEach((item, i) => { msg += `${i+1}. ${item.name} - ${item.price}\n`; });
+            window.open(`https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         function openPasswordModal() {
