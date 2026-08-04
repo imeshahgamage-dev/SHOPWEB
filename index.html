@@ -219,10 +219,30 @@
                 <div class="form-group"><label>තොග මිල</label><input type="text" id="prodPrice" class="form-control"></div>
                 <div class="form-group"><label>විස්තර</label><textarea id="prodDetails" class="form-control"></textarea></div>
                 <div class="form-group"><label>ගෙවීම් ක්‍රමය</label><select id="prodBankSelect" class="form-control"></select></div>
-                <div class="form-group"><label>ඡායාරූප 1</label><input type="file" id="prodImg1" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg1Preview')"><img id="prodImg1Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;"></div>
-                <div class="form-group"><label>ඡායාරූප 2</label><input type="file" id="prodImg2" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg2Preview')"><img id="prodImg2Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;"></div>
-                <div class="form-group"><label>ඡායාරූප 3</label><input type="file" id="prodImg3" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg3Preview')"><img id="prodImg3Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;"></div>
-                <div class="form-group"><label>ඡායාරූප 4</label><input type="file" id="prodImg4" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg4Preview')"><img id="prodImg4Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;"></div>
+                <div class="form-group">
+                    <label>ඡායාරූප 1</label>
+                    <input type="file" id="prodImg1" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg1Preview')">
+                    <input type="text" id="prodImgUrl1" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg1Preview')">
+                    <img id="prodImg1Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
+                <div class="form-group">
+                    <label>ඡායාරූප 2</label>
+                    <input type="file" id="prodImg2" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg2Preview')">
+                    <input type="text" id="prodImgUrl2" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg2Preview')">
+                    <img id="prodImg2Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
+                <div class="form-group">
+                    <label>ඡායාරූප 3</label>
+                    <input type="file" id="prodImg3" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg3Preview')">
+                    <input type="text" id="prodImgUrl3" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg3Preview')">
+                    <img id="prodImg3Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
+                <div class="form-group">
+                    <label>ඡායාරූප 4</label>
+                    <input type="file" id="prodImg4" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg4Preview')">
+                    <input type="text" id="prodImgUrl4" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg4Preview')">
+                    <img id="prodImg4Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
                 <button class="submit-btn" onclick="addNewProduct()">නිෂ්පාදනය සුරකින්න</button>
                 <div class="existing-list" id="existingProductsList"></div>
             </div>
@@ -277,6 +297,18 @@
                 const reader = new FileReader();
                 reader.onload = e => { preview.src = e.target.result; preview.style.display = 'block'; };
                 reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function previewImageUrl(input, previewId) {
+            const preview = document.getElementById(previewId);
+            const url = input.value.trim();
+            if (url) {
+                preview.src = url;
+                preview.style.display = 'block';
+                preview.onerror = () => { preview.style.display = 'none'; };
+            } else {
+                preview.style.display = 'none';
             }
         }
 
@@ -579,7 +611,9 @@
             const details = document.getElementById('prodDetails').value;
             const bankId = document.getElementById('prodBankSelect').value;
             if (!name || !price) { alert('කරුණාකර නිෂ්පාදනයේ නම සහ මිල ඇතුළත් කරන්න.'); return; }
-            const images = await Promise.all([1,2,3,4].map(n => {
+            const images = await Promise.all([1,2,3,4].map(async n => {
+                const urlVal = document.getElementById('prodImgUrl'+n).value.trim();
+                if (urlVal) return urlVal;
                 const file = document.getElementById('prodImg'+n).files[0];
                 return readFileAsBase64(file);
             }));
@@ -589,6 +623,7 @@
                 ['prodName','prodPrice','prodDetails'].forEach(id => document.getElementById(id).value = '');
                 [1,2,3,4].forEach(n => {
                     document.getElementById('prodImg'+n).value = '';
+                    document.getElementById('prodImgUrl'+n).value = '';
                     document.getElementById('prodImg'+n+'Preview').style.display = 'none';
                 });
             });
