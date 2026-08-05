@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="pageTitle">TrendBlaze Wholesale Garments</title>
+    <meta id="seoDescriptionTag" name="description" content="TrendBlaze Wholesale Garments - Wholesale clothing samples and payment methods">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Firebase (compat) -->
@@ -64,31 +65,29 @@
         .order-btn:hover { opacity: 0.9; box-shadow: 0 0 20px var(--primary-pink); }
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .modal-overlay.active { opacity: 1; pointer-events: auto; }
-        .modal-box { background: rgba(45, 15, 35, 0.95); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border); width: 95%; max-width: 850px; border-radius: 25px; padding: 30px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 42, 133, 0.3); transform: scale(0.8) translateY(20px); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); max-height: 90vh; overflow-y: auto; }
+        .modal-box { background: rgba(45, 15, 35, 0.9); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid var(--glass-border); width: 90%; max-width: 650px; border-radius: 25px; padding: 35px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 42, 133, 0.3); transform: scale(0.8) translateY(20px); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); max-height: 90vh; overflow-y: auto; }
         .modal-overlay.active .modal-box { transform: scale(1) translateY(0); }
-        .modal-box.wide { max-width: 900px; }
-        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 12px; }
-        .modal-header h2 { font-size: 1.4rem; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .modal-box.wide { max-width: 800px; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; }
+        .modal-header h2 { font-size: 1.5rem; color: #fff; display: flex; align-items: center; gap: 10px; }
         .close-modal { background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
         .close-modal:hover { color: var(--primary-pink); }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 6px; font-size: 0.9rem; font-weight: 500; color: #fce4ec; }
-        .form-control { width: 100%; padding: 10px 15px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); border-radius: 10px; color: white; font-size: 0.95rem; outline: none; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 0.95rem; font-weight: 500; color: #fce4ec; }
+        .form-control { width: 100%; padding: 12px 18px; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--glass-border); border-radius: 12px; color: white; font-size: 1rem; outline: none; }
         .form-control:focus { border-color: var(--primary-pink); box-shadow: 0 0 15px rgba(255, 42, 133, 0.4); background: rgba(255, 255, 255, 0.15); }
-        textarea.form-control { resize: vertical; min-height: 70px; }
+        textarea.form-control { resize: vertical; min-height: 90px; }
         select.form-control option { background: #3d122d; color: white; }
-        .submit-btn { width: 100%; background: linear-gradient(135deg, var(--primary-pink), #ff5e00); border: none; padding: 12px; border-radius: 10px; color: white; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 6px 20px rgba(255, 42, 133, 0.4); margin-top: 10px; }
+        .submit-btn { width: 100%; background: linear-gradient(135deg, var(--primary-pink), #ff5e00); border: none; padding: 14px; border-radius: 12px; color: white; font-size: 1.1rem; font-weight: 600; cursor: pointer; box-shadow: 0 6px 20px rgba(255, 42, 133, 0.4); margin-top: 10px; }
         .submit-btn:hover { opacity: 0.9; box-shadow: 0 0 25px var(--primary-pink); }
-        
-        /* Admin Tabs Grid / Scrollable for extra items */
-        .admin-tabs { display: flex; gap: 6px; margin-bottom: 20px; background: rgba(0,0,0,0.3); padding: 5px; border-radius: 12px; overflow-x: auto; }
-        .tab-btn { flex: 0 0 auto; padding: 8px 12px; border: none; background: none; color: #aaa; font-weight: 600; border-radius: 8px; cursor: pointer; font-size: 0.78rem; text-align: center; }
+        .admin-tabs { display: flex; gap: 10px; margin-bottom: 25px; background: rgba(0,0,0,0.2); padding: 5px; border-radius: 15px; flex-wrap: wrap; }
+        .tab-btn { flex: 1; min-width: 100px; padding: 10px; border: none; background: none; color: #aaa; font-weight: 600; border-radius: 10px; cursor: pointer; font-size: 0.85rem; text-align: center; }
         .tab-btn.active { background: var(--primary-pink); color: white; box-shadow: 0 4px 15px rgba(255, 42, 133, 0.4); }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        .existing-list { margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; }
-        .existing-item { display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.2); padding:8px 12px; border-radius:8px; margin-bottom:6px; font-size:0.85rem; }
-        .existing-item button { background:none; border:none; color:#ff6b81; cursor:pointer; font-size:0.95rem; }
+        .existing-list { margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
+        .existing-item { display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.2); padding:10px 15px; border-radius:10px; margin-bottom:8px; font-size:0.9rem; }
+        .existing-item button { background:none; border:none; color:#ff6b81; cursor:pointer; font-size:1rem; }
         .bank-section { margin: 60px 0; }
         .bank-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         .bank-card { background: var(--glass-bg); backdrop-filter: blur(15px); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px; display: flex; align-items: center; gap: 14px; }
@@ -96,13 +95,6 @@
         .detail-gallery img { width: 100%; height: 100%; object-fit: cover; display: none; }
         .detail-gallery img.active { display: block; }
         footer { background: var(--glass-bg); backdrop-filter: blur(16px); border-top: 1px solid var(--glass-border); text-align: center; padding: 30px; margin-top: 80px; color: #ddd; font-size: 0.95rem; }
-        
-        /* Analytics Cards */
-        .analytics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 20px; }
-        .stat-card { background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); border-radius: 12px; padding: 15px; text-align: center; }
-        .stat-card h4 { font-size: 0.8rem; color: #ffb6d7; margin-bottom: 5px; }
-        .stat-card .val { font-size: 1.5rem; font-weight: 700; color: #fff; }
-
         @media(max-width: 768px) {
             header { padding: 12px 15px; flex-wrap: wrap; gap: 10px; }
             .logo-area h1 { font-size: 1.15rem; }
@@ -118,8 +110,57 @@
             .modal-box { padding: 20px; width: 94%; }
             .modal-box.wide { max-width: 94%; }
             .detail-gallery { height: 220px; }
+            .admin-tabs { gap: 6px; }
+            .tab-btn { min-width: 80px; font-size: 0.75rem; padding: 8px 4px; }
             footer { padding: 20px; margin-top: 50px; }
         }
+
+        @media(max-width: 380px) {
+            .header-actions { gap: 8px; }
+            .action-btn { padding: 7px 10px; }
+            .logo-area h1 { font-size: 1rem; }
+        }
+
+        /* ===== New feature styles ===== */
+        .banner-slider { position: relative; height: 220px; border-radius: 20px; overflow: hidden; margin-bottom: 40px; background: rgba(0,0,0,0.2); display: none; }
+        .banner-slider img { width: 100%; height: 100%; object-fit: cover; display: none; cursor: pointer; }
+        .banner-slider img.active { display: block; }
+        .stock-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+        .stock-in { background: rgba(76, 209, 55, 0.2); color: #4cd137; border: 1px solid #4cd137; }
+        .stock-low { background: rgba(255, 165, 2, 0.2); color: #ffa502; border: 1px solid #ffa502; }
+        .stock-out { background: rgba(255, 71, 87, 0.2); color: #ff4757; border: 1px solid #ff4757; }
+        .star-rating { color: #ffd700; font-size: 0.9rem; margin-bottom: 8px; }
+        .star-rating .rcount { color: #ddd; font-size: 0.8rem; margin-left: 4px; }
+        .faq-section { margin: 60px 0; }
+        .faq-item { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 14px; margin-bottom: 12px; overflow: hidden; }
+        .faq-question { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; color: #ddd; font-size: 0.9rem; line-height: 1.6; }
+        .faq-item.open .faq-answer { padding: 0 20px 16px; max-height: 400px; }
+        .faq-item.open .faq-question i { transform: rotate(180deg); }
+        .newsletter-box { max-width: 500px; margin: 60px auto; text-align: center; background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 30px; }
+        .newsletter-box .form-group { display: flex; gap: 10px; margin-bottom: 0; }
+        .newsletter-box input { flex-grow: 1; }
+        .newsletter-box button { width: auto; padding: 12px 22px; margin-top: 0; }
+        .contact-form-section { max-width: 600px; margin: 60px auto; }
+        .dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; margin-bottom: 25px; }
+        .dash-card { background: rgba(0,0,0,0.25); border: 1px solid var(--glass-border); border-radius: 14px; padding: 16px; text-align: center; }
+        .dash-card .num { font-size: 1.6rem; font-weight: 700; color: var(--light-pink); }
+        .dash-card .lbl { font-size: 0.78rem; color: #ddd; margin-top: 4px; }
+        .status-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; text-transform: capitalize; }
+        .status-pending { background: rgba(255,165,2,0.2); color: #ffa502; border:1px solid #ffa502; }
+        .status-confirmed { background: rgba(52,152,219,0.2); color: #3498db; border:1px solid #3498db; }
+        .status-shipped { background: rgba(155,89,182,0.2); color: #9b59b6; border:1px solid #9b59b6; }
+        .status-delivered { background: rgba(76,209,55,0.2); color: #4cd137; border:1px solid #4cd137; }
+        .status-cancelled { background: rgba(255,71,87,0.2); color: #ff4757; border:1px solid #ff4757; }
+        .order-card { background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 12px; padding: 14px; margin-bottom: 10px; font-size: 0.85rem; }
+        .order-card .oc-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; flex-wrap:wrap; gap:6px; }
+        .order-card select.form-control { padding: 6px 10px; width: auto; font-size: 0.8rem; }
+        .mini-list-item { display:flex; justify-content:space-between; align-items:center; background:rgba(0,0,0,0.2); padding:8px 12px; border-radius:8px; margin-bottom:6px; font-size:0.82rem; }
+        .activity-feed { max-height: 260px; overflow-y: auto; }
+        .activity-feed .mini-list-item { align-items: flex-start; }
+        .review-item { background: rgba(0,0,0,0.2); border-radius: 10px; padding: 12px; margin-bottom: 10px; font-size: 0.85rem; }
+        .recycle-tag { font-size: 0.7rem; color: #ffa502; }
+        .badge-count { background: var(--primary-pink); color: white; font-size: 0.65rem; padding: 1px 6px; border-radius: 10px; margin-left: 6px; }
     </style>
 </head>
 <body>
@@ -139,6 +180,7 @@
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cartCountBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:var(--primary-pink);color:#fff;font-size:0.7rem;font-weight:700;min-width:20px;height:20px;border-radius:10px;align-items:center;justify-content:center;padding:0 5px;box-shadow:0 0 8px var(--primary-pink);">0</span>
             </div>
+            <div class="settings-icon-btn" onclick="document.getElementById('contactFormModal').classList.add('active')" title="Contact Us"><i class="fa-solid fa-headset"></i></div>
             <div class="settings-icon-btn" onclick="openPasswordModal()" title="Admin Settings"><i class="fa-solid fa-gear"></i></div>
         </div>
     </header>
@@ -155,11 +197,20 @@
             <h2 class="section-title"><i class="fa-solid fa-building-columns" style="color: var(--primary-pink);"></i><span id="bankSectionTitleLabel">ගෙවීම් ක්‍රම (Bank Payment Details)</span></h2>
             <div class="bank-grid" id="bankSummaryGrid"></div>
         </div>
+
+        <div class="bank-section" id="faqSection" style="display:none;">
+            <h2 class="section-title"><i class="fa-solid fa-circle-question" style="color: var(--primary-pink);"></i><span>නිතර අසන ප්‍රශ්න (FAQ)</span></h2>
+            <div id="faqPublicList"></div>
+        </div>
     </div>
 
     <footer>
         <p id="footerText">&copy; 2026 TrendBlaze Wholesale Garments. All Rights Reserved.</p>
         <p style="margin-top:8px;font-size:0.8rem;color:#bbb;">Design By Kaveesha Udayanga Wickramasinghe</p>
+        <div style="max-width:420px;margin:20px auto 0;display:flex;gap:8px;">
+            <input type="email" id="newsletterEmailInput" class="form-control" placeholder="ඔබේ Email ලිපිනය" style="flex:1;">
+            <button class="action-btn" onclick="subscribeNewsletter()" style="white-space:nowrap;">Subscribe</button>
+        </div>
     </footer>
 
     <!-- Password Modal -->
@@ -180,9 +231,22 @@
             <div class="product-price" id="detailPrice" style="margin-bottom:10px;"></div>
             <div class="product-details" id="detailDetails" style="margin-bottom:15px;"></div>
             <div class="product-payment-box" id="detailBankBox"></div>
+            <div id="detailStockBadge" style="margin-bottom:10px;font-size:0.9rem;"></div>
             <div style="display:flex;gap:10px;margin-top:15px;">
                 <button id="detailAddToCartBtn" class="order-btn" style="background:linear-gradient(135deg,#6c3fc5,#a54fd6);" onclick="addToCart(currentDetailProductId)"><i class="fa-solid fa-cart-plus"></i> කාට් එකට එකතු කරන්න</button>
                 <a href="#" id="detailOrderBtn" target="_blank" class="order-btn"><i class="fa-brands fa-whatsapp"></i> ඇණවුම් කරන්න</a>
+            </div>
+
+            <div style="margin-top:25px;border-top:1px solid rgba(255,255,255,0.1);padding-top:15px;">
+                <h3 style="font-size:1.05rem;margin-bottom:12px;">Reviews & Ratings</h3>
+                <div id="detailReviewsList" style="margin-bottom:15px;"></div>
+                <div class="form-group"><label>ඔබේ නම</label><input type="text" id="reviewName" class="form-control"></div>
+                <div class="form-group">
+                    <label>ඇගයීම (Rating)</label>
+                    <select id="reviewRating" class="form-control"><option value="5">⭐⭐⭐⭐⭐</option><option value="4">⭐⭐⭐⭐</option><option value="3">⭐⭐⭐</option><option value="2">⭐⭐</option><option value="1">⭐</option></select>
+                </div>
+                <div class="form-group"><label>Comment</label><textarea id="reviewComment" class="form-control"></textarea></div>
+                <button class="submit-btn" onclick="submitReview()">Review එක යවන්න</button>
             </div>
         </div>
     </div>
@@ -193,60 +257,40 @@
             <div class="modal-header"><h2><i class="fa-solid fa-cart-shopping"></i> මගේ කාට් එක</h2><button class="close-modal" onclick="closeModal('cartModal')">&times;</button></div>
             <div id="cartItemsList"></div>
             <p id="cartEmptyMsg" style="color:#ddd;text-align:center;padding:20px 0;display:none;">කාට් එකේ මොනවත් නෑ. Product එකක් open කරලා "කාට් එකට එකතු කරන්න" click කරන්න.</p>
-            <button class="submit-btn" onclick="orderSelectedCartItems()" id="cartOrderBtn"><i class="fa-brands fa-whatsapp"></i> තෝරාගත් අයිතම ඇණවුම් කරන්න</button>
+            <button class="submit-btn" onclick="openCheckoutModal()" id="cartOrderBtn"><i class="fa-solid fa-truck-fast"></i> Checkout කරන්න (Order තහවුරු කරන්න)</button>
+            <button class="action-btn" onclick="orderSelectedCartItems()" style="width:100%;justify-content:center;margin-top:10px;"><i class="fa-brands fa-whatsapp"></i> WhatsApp හරහා විමසන්න</button>
         </div>
     </div>
 
-    <!-- Full Featured Admin Panel Modal -->
+    <!-- Admin Panel Modal -->
     <div class="modal-overlay" id="adminModal">
-        <div class="modal-box wide">
-            <div class="modal-header"><h2><i class="fa-solid fa-sliders"></i> පූර්ණ ඇඩ්මින් පැනලය (Full Control Center)</h2><button class="close-modal" onclick="closeModal('adminModal')">&times;</button></div>
+        <div class="modal-box">
+            <div class="modal-header"><h2><i class="fa-solid fa-sliders"></i> ඇඩ්මින් පැනලය</h2><button class="close-modal" onclick="closeModal('adminModal')">&times;</button></div>
 
             <div class="admin-tabs">
-                <button class="tab-btn active" onclick="switchAdminTab('dashboardTabContent', this)"><i class="fa-solid fa-chart-pie"></i> Dashboard</button>
-                <button class="tab-btn" onclick="switchAdminTab('usersTabContent', this)"><i class="fa-solid fa-users-gear"></i> Users</button>
-                <button class="tab-btn" onclick="switchAdminTab('generalTabContent', this)"><i class="fa-solid fa-globe"></i> සයිට් & ලාංඡන</button>
-                <button class="tab-btn" onclick="switchAdminTab('textsTabContent', this)"><i class="fa-solid fa-font"></i> පෙළ ලේබල</button>
-                <button class="tab-btn" onclick="switchAdminTab('productTabContent', this)"><i class="fa-solid fa-box"></i> නිෂ්පාදන</button>
-                <button class="tab-btn" onclick="switchAdminTab('bankTabContent', this)"><i class="fa-solid fa-building-columns"></i> බැංකු & බදු</button>
-                <button class="tab-btn" onclick="switchAdminTab('marketingTabContent', this)"><i class="fa-solid fa-bullhorn"></i> අලෙවිකරණය</button>
-                <button class="tab-btn" onclick="switchAdminTab('contactTabContent', this)"><i class="fa-solid fa-address-book"></i> සම්බන්ධතා</button>
-                <button class="tab-btn" onclick="switchAdminTab('maintenanceTabContent', this)"><i class="fa-solid fa-shield-halved"></i> ආරක්ෂාව & නඩත්තුව</button>
+                <button class="tab-btn active" onclick="switchAdminTab('dashboardTabContent', this)">Dashboard</button>
+                <button class="tab-btn" onclick="switchAdminTab('generalTabContent', this)">සයිට් & ලාංඡන</button>
+                <button class="tab-btn" onclick="switchAdminTab('textsTabContent', this)">සියලුම පෙළ</button>
+                <button class="tab-btn" onclick="switchAdminTab('productTabContent', this)">නිෂ්පාදන</button>
+                <button class="tab-btn" onclick="switchAdminTab('bankTabContent', this)">බැංකු</button>
+                <button class="tab-btn" onclick="switchAdminTab('contactTabContent', this)">සම්බන්ධතා</button>
+                <button class="tab-btn" onclick="switchAdminTab('ordersTabContent', this)">ඇණවුම්</button>
+                <button class="tab-btn" onclick="switchAdminTab('couponsTabContent', this)">වට්ටම් & ගාස්තු</button>
+                <button class="tab-btn" onclick="switchAdminTab('faqTabContent', this)">FAQ</button>
+                <button class="tab-btn" onclick="switchAdminTab('bannerTabContent', this)">බැනර්</button>
+                <button class="tab-btn" onclick="switchAdminTab('reviewsTabContent', this)">Reviews</button>
+                <button class="tab-btn" onclick="switchAdminTab('messagesTabContent', this)">පණිවිඩ</button>
+                <button class="tab-btn" onclick="switchAdminTab('newsletterTabContent', this)">Newsletter</button>
+                <button class="tab-btn" onclick="switchAdminTab('usersTabContent', this)">Admins & Customers</button>
+                <button class="tab-btn" onclick="switchAdminTab('securityTabContent', this)">Security & Backup</button>
             </div>
 
-            <!-- 1. Dashboard / Analytics Tab -->
             <div id="dashboardTabContent" class="tab-content active">
-                <h3 style="margin-bottom:15px;font-size:1.1rem;color:var(--light-pink);">සමස්ත සාරාංශය සහ විශ්ලේෂණ</h3>
-                <div class="analytics-grid">
-                    <div class="stat-card"><h4>දෛනික පිවිසුම්</h4><div class="val" id="statVisitors">1,240</div></div>
-                    <div class="stat-card"><h4>මුළු නිෂ්පාදන</h4><div class="val" id="statProductsCount">1</div></div>
-                    <div class="stat-card"><h4>ඇඩ්මින් ගිණුම්</h4><div class="val" id="statAdminsCount">1</div></div>
-                    <div class="stat-card"><h4>පද්ධති තත්ත්වය</h4><div class="val" style="font-size:1.1rem;color:#4cd137;">Online (Live)</div></div>
-                </div>
-                <div class="form-group" style="margin-top:20px;">
-                    <label>මෑතකදී සිදුවූ ක්‍රියාකාරකම් (Recent System Activity Logs)</label>
-                    <div id="activityLogsList" style="background:rgba(0,0,0,0.25);padding:10px;border-radius:10px;max-height:150px;overflow-y:auto;font-size:0.85rem;color:#ddd;">
-                        <div>[System] ඇඩ්මින් පැනලය සාර්ථකව ක්‍රියාත්මක වේ.</div>
-                    </div>
-                </div>
+                <div id="dashboardStatsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-bottom:20px;"></div>
+                <h3 style="font-size:1rem;margin-bottom:10px;color:#fce4ec;">මෑතකදී සිදුවූ ක්‍රියාකාරකම් (Recent Activity)</h3>
+                <div class="existing-list" id="dashboardActivityList" style="max-height:280px;overflow-y:auto;"></div>
             </div>
 
-            <!-- 2. User & Role Management Tab -->
-            <div id="usersTabContent" class="tab-content">
-                <h3 style="margin-bottom:15px;font-size:1.1rem;color:var(--light-pink);">පරිපාලක සහ කාර්ය මණ්ඩල කළමනාකරණය</h3>
-                <div class="form-group"><label>නව පරිපාලකගේ නම</label><input type="text" id="newAdminName" class="form-control" placeholder="උදා: නියෝජ්‍ය පරිපාලක"></div>
-                <div class="form-group"><label>තනතුර / බලතල මට්ටම (Role)</label>
-                    <select id="newAdminRole" class="form-control">
-                        <option value="Admin">Full Admin (පූර්ණ බලතල)</option>
-                        <option value="Editor">Editor (අන්තර්ගතය පමණක් සංස්කරණය)</option>
-                        <option value="Moderator">Moderator (සමාලෝචන පාලනය)</option>
-                    </select>
-                </div>
-                <button class="submit-btn" onclick="addNewStaffUser()">නව කාර්ය මණ්ඩල සාමාජිකයෙකු එක් කරන්න</button>
-                <div class="existing-list" id="existingStaffList"></div>
-            </div>
-
-            <!-- 3. General Settings -->
             <div id="generalTabContent" class="tab-content">
                 <div class="form-group"><label>වෙබ් අඩවියේ නම (Site Name)</label><input type="text" id="settingSiteName" class="form-control"></div>
                 <div class="form-group">
@@ -254,10 +298,14 @@
                     <input type="file" id="settingLogoFile" class="form-control" accept="image/*" onchange="previewImage(this,'settingLogoPreview')">
                     <img id="settingLogoPreview" src="" style="max-width:80px;max-height:80px;margin-top:8px;border-radius:8px;display:none;">
                 </div>
-                <button class="submit-btn" onclick="saveGeneralSettings()">සැකසුම් සුරකින්න</button>
+                <div class="form-group"><label>SEO මාතෘකාව (Page Title)</label><input type="text" id="settingSeoTitle" class="form-control"></div>
+                <div class="form-group"><label>SEO විස්තරය (Meta Description)</label><textarea id="settingSeoDesc" class="form-control"></textarea></div>
+                <div class="form-group"><label>මුදල් ඒකකය (Currency Symbol)</label><input type="text" id="settingCurrency" class="form-control" placeholder="LKR"></div>
+                <div class="form-group"><label>නැව්ගත කිරීමේ ගාස්තුව (Shipping Fee)</label><input type="number" id="settingShippingFee" class="form-control" placeholder="0"></div>
+                <div class="form-group"><label>බදු ප්‍රතිශතය (Tax %)</label><input type="number" id="settingTaxPercent" class="form-control" placeholder="0"></div>
+                <button class="submit-btn" onclick="saveGeneralSettings()">සුරකින්න</button>
             </div>
 
-            <!-- 4. All Text Labels -->
             <div id="textsTabContent" class="tab-content">
                 <p style="color:#ddd;font-size:0.85rem;margin-bottom:15px;">වෙබ් අඩවියේ පේන හැම ලේබලයක්ම මෙතනින් වෙනස් කරන්න පුළුවන්.</p>
                 <div class="form-group"><label>Section Title (නිෂ්පාදන කොටසේ මාතෘකාව)</label><input type="text" id="textSectionTitle" class="form-control"></div>
@@ -270,48 +318,49 @@
                 <button class="submit-btn" onclick="saveTexts()">සියලුම පෙළ සුරකින්න</button>
             </div>
 
-            <!-- 5. Products & Inventory Tab -->
             <div id="productTabContent" class="tab-content">
                 <div class="form-group"><label>නිෂ්පාදනයේ නම සහ කේතය</label><input type="text" id="prodName" class="form-control"></div>
-                <div class="form-group"><label>තොග මිල (Price & Stock Info)</label><input type="text" id="prodPrice" class="form-control"></div>
+                <div class="form-group"><label>තොග මිල</label><input type="text" id="prodPrice" class="form-control"></div>
+                <div class="form-group"><label>තොග ප්‍රමාණය (Stock Quantity)</label><input type="number" id="prodStock" class="form-control" placeholder="100"></div>
                 <div class="form-group"><label>විස්තර</label><textarea id="prodDetails" class="form-control"></textarea></div>
                 <div class="form-group"><label>ගෙවීම් ක්‍රමය</label><select id="prodBankSelect" class="form-control"></select></div>
                 <div class="form-group">
-                    <label>ඡායාරූප 1 (File හෝ Image Link)</label>
+                    <label>ඡායාරූප 1</label>
                     <input type="file" id="prodImg1" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg1Preview')">
-                    <input type="text" id="prodImgUrl1" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න" style="margin-top:6px;" oninput="previewImageUrl(this,'prodImg1Preview')">
-                    <img id="prodImg1Preview" style="max-width:80px;max-height:80px;margin-top:6px;border-radius:6px;display:none;">
+                    <input type="text" id="prodImgUrl1" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg1Preview')">
+                    <img id="prodImg1Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
                 </div>
                 <div class="form-group">
                     <label>ඡායාරූප 2</label>
                     <input type="file" id="prodImg2" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg2Preview')">
-                    <input type="text" id="prodImgUrl2" class="form-control" placeholder="Image link" style="margin-top:6px;" oninput="previewImageUrl(this,'prodImg2Preview')">
-                    <img id="prodImg2Preview" style="max-width:80px;max-height:80px;margin-top:6px;border-radius:6px;display:none;">
+                    <input type="text" id="prodImgUrl2" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg2Preview')">
+                    <img id="prodImg2Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
                 </div>
-                <button class="submit-btn" onclick="addNewProduct()">නිෂ්පාදනය එකතු කරන්න</button>
+                <div class="form-group">
+                    <label>ඡායාරූප 3</label>
+                    <input type="file" id="prodImg3" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg3Preview')">
+                    <input type="text" id="prodImgUrl3" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg3Preview')">
+                    <img id="prodImg3Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
+                <div class="form-group">
+                    <label>ඡායාරූප 4</label>
+                    <input type="file" id="prodImg4" class="form-control" accept="image/*" onchange="previewImage(this,'prodImg4Preview')">
+                    <input type="text" id="prodImgUrl4" class="form-control" placeholder="හෝ Pinterest/වෙනත් image link එකක් මෙතන paste කරන්න (i.pinimg.com/... .jpg)" style="margin-top:8px;" oninput="previewImageUrl(this,'prodImg4Preview')">
+                    <img id="prodImg4Preview" style="max-width:100px;max-height:100px;margin-top:8px;border-radius:8px;display:none;">
+                </div>
+                <button class="submit-btn" onclick="addNewProduct()">නිෂ්පාදනය සුරකින්න</button>
                 <div class="existing-list" id="existingProductsList"></div>
             </div>
 
-            <!-- 6. Banks, Currency, Shipping & Tax Tab -->
             <div id="bankTabContent" class="tab-content">
                 <div class="form-group"><label>බැංකුව / ශාඛාව</label><input type="text" id="bankName" class="form-control"></div>
                 <div class="form-group"><label>ගිණුමේ නම</label><input type="text" id="bankAccName" class="form-control"></div>
                 <div class="form-group"><label>ගිණුම් අංකය</label><input type="text" id="bankAccNum" class="form-control"></div>
-                <div class="form-group"><label>බදු ප්‍රතිශත සහ නැව්ගත කිරීමේ කලාප සැකසුම් (Tax & Shipping Zones)</label><input type="text" id="shippingTaxInfo" class="form-control" placeholder="උදා: Colombo Free / Outstation LKR 400 | VAT 0%"></div>
-                <div class="form-group"><label>බැංකු ලාංඡන ඡායාරූපය</label><input type="file" id="bankLogoUrl" class="form-control" accept="image/*" onchange="previewImage(this,'bankLogoPreview')"><img id="bankLogoPreview" style="max-width:70px;max-height:70px;margin-top:6px;border-radius:6px;display:none;"></div>
+                <div class="form-group"><label>බැංකු ලාංඡන ඡායාරූපය</label><input type="file" id="bankLogoUrl" class="form-control" accept="image/*" onchange="previewImage(this,'bankLogoPreview')"><img id="bankLogoPreview" style="max-width:80px;max-height:80px;margin-top:8px;border-radius:8px;display:none;"></div>
                 <button class="submit-btn" onclick="addNewBank()">බැංකු ගිණුම සුරකින්න</button>
                 <div class="existing-list" id="existingBanksList"></div>
             </div>
 
-            <!-- 7. Marketing & Promotions Tab -->
-            <div id="marketingTabContent" class="tab-content">
-                <h3 style="margin-bottom:15px;font-size:1.1rem;color:var(--light-pink);">අලෙවිකරණය සහ දැන්වීම් (Marketing & Newsletter)</h3>
-                <div class="form-group"><label>විශේෂ දැන්වීම් බැනරය / පොප්-අප් පණිවිඩය (Pop-up Banner Text)</label><input type="text" id="marketingPopupText" class="form-control" placeholder="උදා: තොග ඇණවුම් සඳහා 10% වට්ටමක්!"></div>
-                <div class="form-group"><label>පාරිභෝගික ඊමේල් ලැයිස්තුව (Newsletter Subscribers)</label><textarea id="newsletterListDisplay" class="form-control" readonly>user1@gmail.com, wholesale_buyer@yahoo.com</textarea></div>
-                <button class="submit-btn" onclick="saveMarketingSettings()">අලෙවිකරණ සැකසුම් යාවත්කාලීන කරන්න</button>
-            </div>
-
-            <!-- 8. Contact & Social Tab -->
             <div id="contactTabContent" class="tab-content">
                 <div class="form-group"><label>WhatsApp අංකය</label><input type="text" id="settingWhatsapp" class="form-control"></div>
                 <div class="form-group"><label>ඇමතුම් අංකය</label><input type="text" id="settingPhone" class="form-control"></div>
@@ -319,20 +368,125 @@
                 <button class="submit-btn" onclick="saveContacts()">සම්බන්ධතා සුරකින්න</button>
             </div>
 
-            <!-- 9. Security, Backup & Trash (Maintenance) Tab -->
-            <div id="maintenanceTabContent" class="tab-content">
-                <h3 style="margin-bottom:15px;font-size:1.1rem;color:var(--light-pink);">ආරක්ෂාව, බැකප් සහ ඉවත් කළ දත්ත (Trash & Backup)</h3>
-                <div style="display:flex;gap:10px;margin-bottom:15px;">
-                    <button class="submit-btn" style="background:#4cd137;margin-top:0;" onclick="downloadDatabaseBackup()"><i class="fa-solid fa-download"></i> දත්ත උපස්ථය (Backup) බාගත කරන්න</button>
-                    <button class="submit-btn" style="background:#ff4757;margin-top:0;" onclick="clearTrashBin()"><i class="fa-solid fa-trash-can"></i> ඉවත් කළ දත්ත ස්ථිරවම මකන්න (Clear Trash)</button>
+            <div id="ordersTabContent" class="tab-content">
+                <p style="color:#ddd;font-size:0.85rem;margin-bottom:15px;">පාරිභෝගිකයින් cart එකෙන් checkout කරන සියලුම ඇණවුම් මෙතන පෙන්වයි.</p>
+                <div class="existing-list" id="ordersList" style="margin-top:0;"></div>
+            </div>
+
+            <div id="couponsTabContent" class="tab-content">
+                <h3 style="font-size:1rem;margin-bottom:12px;color:#fce4ec;">වට්ටම් කූපන් (Discount Coupons)</h3>
+                <div class="form-group"><label>කූපන් කේතය</label><input type="text" id="couponCode" class="form-control" placeholder="SAVE10"></div>
+                <div class="form-group"><label>වට්ටම් ප්‍රතිශතය (%)</label><input type="number" id="couponPercent" class="form-control" placeholder="10"></div>
+                <div class="form-group"><label>කල් ඉකුත් වන දිනය</label><input type="date" id="couponExpiry" class="form-control"></div>
+                <button class="submit-btn" onclick="addCoupon()">කූපනය සුරකින්න</button>
+                <div class="existing-list" id="existingCouponsList"></div>
+            </div>
+
+            <div id="faqTabContent" class="tab-content">
+                <h3 style="font-size:1rem;margin-bottom:12px;color:#fce4ec;">නිතර අසන ප්‍රශ්න (FAQ)</h3>
+                <div class="form-group"><label>ප්‍රශ්නය</label><input type="text" id="faqQuestion" class="form-control"></div>
+                <div class="form-group"><label>පිළිතුර</label><textarea id="faqAnswer" class="form-control"></textarea></div>
+                <button class="submit-btn" onclick="addFaq()">FAQ එක සුරකින්න</button>
+                <div class="existing-list" id="existingFaqList"></div>
+            </div>
+
+            <div id="bannerTabContent" class="tab-content">
+                <h3 style="font-size:1rem;margin-bottom:12px;color:#fce4ec;">දැන්වීම් බැනර් (Banner / Pop-up)</h3>
+                <div class="form-group">
+                    <label>බැනර් ඡායාරූපය</label>
+                    <input type="file" id="bannerImgFile" class="form-control" accept="image/*" onchange="previewImage(this,'bannerImgPreview')">
+                    <input type="text" id="bannerImgUrl" class="form-control" placeholder="හෝ image link එකක් paste කරන්න" style="margin-top:8px;" oninput="previewImageUrl(this,'bannerImgPreview')">
+                    <img id="bannerImgPreview" style="max-width:120px;max-height:120px;margin-top:8px;border-radius:8px;display:none;">
                 </div>
-                <div class="form-group"><label>ආරක්ෂක සැකසුම් (Two-Factor / Secure Logs)</label><input type="text" class="form-control" value="Enabled (Active Password: 0557954)" readonly></div>
+                <div class="form-group"><label>බැනර් පණිවිඩය</label><input type="text" id="bannerText" class="form-control"></div>
+                <div class="form-group"><label><input type="checkbox" id="bannerActive" checked style="width:auto;margin-right:8px;">සක්‍රීයද (Active as popup)?</label></div>
+                <button class="submit-btn" onclick="addBanner()">බැනරය සුරකින්න</button>
+                <div class="existing-list" id="existingBannerList"></div>
+            </div>
+
+            <div id="reviewsTabContent" class="tab-content">
+                <p style="color:#ddd;font-size:0.85rem;margin-bottom:15px;">පාරිභෝගිකයින් නිෂ්පාදන පිටුවෙන් එවන reviews අනුමත කරන්න / ඉවත් කරන්න.</p>
+                <div class="existing-list" id="reviewsList" style="margin-top:0;"></div>
+            </div>
+
+            <div id="messagesTabContent" class="tab-content">
+                <p style="color:#ddd;font-size:0.85rem;margin-bottom:15px;">Contact Form එකෙන් ලැබුණු පණිවිඩ.</p>
+                <div class="existing-list" id="messagesList" style="margin-top:0;"></div>
+            </div>
+
+            <div id="newsletterTabContent" class="tab-content">
+                <p style="color:#ddd;font-size:0.85rem;margin-bottom:15px;">Newsletter එකට register වූ ග්‍රාහකයින්.</p>
+                <button class="submit-btn" onclick="copyNewsletterEmails()" style="margin-bottom:15px;">සියලුම Emails Copy කරන්න</button>
+                <div class="existing-list" id="newsletterList" style="margin-top:0;"></div>
+            </div>
+
+            <div id="usersTabContent" class="tab-content">
+                <h3 style="font-size:1rem;margin-bottom:12px;color:#fce4ec;">නව ඇඩ්මින් Account එකතු කරන්න</h3>
+                <div class="form-group"><label>Username</label><input type="text" id="newAdminUser" class="form-control"></div>
+                <div class="form-group"><label>Password</label><input type="text" id="newAdminPass" class="form-control"></div>
+                <button class="submit-btn" onclick="addAdminUser()">Admin එකතු කරන්න</button>
+                <div class="existing-list" id="existingAdminsList"></div>
+                <h3 style="font-size:1rem;margin:20px 0 12px;color:#fce4ec;">පාරිභෝගිකයින් (Orders/Messages වලින්)</h3>
+                <div class="existing-list" id="customersList" style="margin-top:0;"></div>
+            </div>
+
+            <div id="securityTabContent" class="tab-content">
+                <h3 style="font-size:1rem;margin-bottom:12px;color:#fce4ec;">ප්‍රධාන Admin රහස් කේතය වෙනස් කරන්න</h3>
+                <div class="form-group"><label>නව රහස් කේතය</label><input type="password" id="newMasterPassword" class="form-control"></div>
+                <button class="submit-btn" onclick="changeMasterPassword()">රහස් කේතය වෙනස් කරන්න</button>
+
+                <h3 style="font-size:1rem;margin:25px 0 12px;color:#fce4ec;">දත්ත උපස්ථ (Backup)</h3>
+                <button class="submit-btn" onclick="downloadBackup()" style="margin-bottom:10px;"><i class="fa-solid fa-download"></i> සම්පූර්ණ දත්ත Backup බාගන්න</button>
+                <div class="form-group"><label>Backup JSON file එකෙන් Restore කරන්න</label><input type="file" id="restoreFile" class="form-control" accept="application/json"></div>
+                <button class="submit-btn" onclick="restoreBackup()" style="background:linear-gradient(135deg,#c5453f,#8a2f2a);">Restore කරන්න</button>
+
+                <h3 style="font-size:1rem;margin:25px 0 12px;color:#fce4ec;">Trash / Recycle Bin (නිෂ්පාදන)</h3>
+                <div class="existing-list" id="trashList" style="margin-top:0;"></div>
+
+                <h3 style="font-size:1rem;margin:25px 0 12px;color:#fce4ec;">Audit Log (Admin ක්‍රියාකාරකම්)</h3>
+                <div class="existing-list" id="auditLogList" style="margin-top:0;max-height:220px;overflow-y:auto;"></div>
+
+                <h3 style="font-size:1rem;margin:25px 0 12px;color:#fce4ec;">Error Log</h3>
+                <div class="existing-list" id="errorLogList" style="margin-top:0;max-height:180px;overflow-y:auto;"></div>
             </div>
         </div>
     </div>
 
+    <!-- Banner Popup -->
+    <div class="modal-overlay" id="bannerPopupModal">
+        <div class="modal-box" style="max-width:480px;text-align:center;">
+            <div class="modal-header"><h2><i class="fa-solid fa-bullhorn"></i> දැන්වීම</h2><button class="close-modal" onclick="closeModal('bannerPopupModal')">&times;</button></div>
+            <img id="bannerPopupImg" style="width:100%;border-radius:14px;margin-bottom:15px;display:none;">
+            <p id="bannerPopupText" style="color:#fce4ec;"></p>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-box">
+            <div class="modal-header"><h2><i class="fa-solid fa-truck-fast"></i> ඇණවුම තහවුරු කරන්න</h2><button class="close-modal" onclick="closeModal('checkoutModal')">&times;</button></div>
+            <div class="form-group"><label>නම</label><input type="text" id="checkoutName" class="form-control"></div>
+            <div class="form-group"><label>දුරකථන අංකය</label><input type="text" id="checkoutPhone" class="form-control"></div>
+            <div class="form-group"><label>ලිපිනය</label><textarea id="checkoutAddress" class="form-control"></textarea></div>
+            <div class="form-group"><label>වට්ටම් කූපන් කේතය (තිබේ නම්)</label><input type="text" id="checkoutCoupon" class="form-control" oninput="updateCheckoutSummary()"></div>
+            <div id="checkoutSummary" style="background:rgba(0,0,0,0.25);border-radius:12px;padding:14px;margin:15px 0;font-size:0.9rem;"></div>
+            <button class="submit-btn" onclick="submitOrder()">ඇණවුම තහවුරු කරන්න</button>
+        </div>
+    </div>
+
+    <!-- Contact / Support Modal -->
+    <div class="modal-overlay" id="contactFormModal">
+        <div class="modal-box" style="max-width:450px;">
+            <div class="modal-header"><h2><i class="fa-solid fa-headset"></i> අප හා සම්බන්ධ වන්න</h2><button class="close-modal" onclick="closeModal('contactFormModal')">&times;</button></div>
+            <div class="form-group"><label>නම</label><input type="text" id="msgName" class="form-control"></div>
+            <div class="form-group"><label>දුරකථන අංකය</label><input type="text" id="msgPhone" class="form-control"></div>
+            <div class="form-group"><label>පණිවිඩය</label><textarea id="msgText" class="form-control"></textarea></div>
+            <button class="submit-btn" onclick="submitContactMessage()">යවන්න</button>
+        </div>
+    </div>
+
     <script>
-        // ============ FIREBASE CONFIG - KEPT INTACT ============
+        // ============ FIREBASE CONFIG - REPLACE WITH YOUR OWN PROJECT CONFIG ============
         const firebaseConfig = {
             apiKey: "AIzaSyCynhzVrBMnyRjv7eSO7r9enBO5J0YBS94",
             authDomain: "shopwebsite-4f059.firebaseapp.com",
@@ -342,6 +496,7 @@
             messagingSenderId: "164502866277",
             appId: "1:164502866277:web:efeea0549f8ca89934b98c"
         };
+        // =================================================================================
 
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
@@ -377,6 +532,7 @@
             }
         }
 
+        // ---- Local cache so refresh shows last-known data instantly, before Firebase reconnects ----
         function cacheSet(key, value) {
             try { localStorage.setItem('tb_cache_' + key, JSON.stringify(value)); } catch (e) {}
         }
@@ -385,7 +541,7 @@
         }
 
         const defaults = {
-            siteInfo: { name: "TrendBlaze Wholesale Garments", logoUrl: "" },
+            siteInfo: { name: "TrendBlaze Wholesale Garments", logoUrl: "", seoTitle: "TrendBlaze Wholesale Garments", seoDesc: "", currency: "LKR", shippingFee: 0, taxPercent: 0 },
             texts: {
                 sectionTitle: "ඇඳුම් සාම්පල නාමාවලිය (Wholesale Samples & Payment Methods)",
                 bankSectionTitle: "ගෙවීම් ක්‍රම (Bank Payment Details)",
@@ -398,27 +554,38 @@
                 bank_1: { bankName: "Commercial Bank - Colombo 03", accName: "TrendBlaze Garments (Pvt) Ltd", accNum: "8005678912", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Commercial_Bank_of_Ceylon_logo.svg/320px-Commercial_Bank_of_Ceylon_logo.svg.png" }
             },
             products: {
-                prod_1: { name: "Ladies Casual Frock (TB-101)", price: "LKR 1,800 / Piece", details: "ප්‍රමාණ: S, M, L, XL | රෙදි: Pure Cotton | MOQ: Pcs 30", bankId: "bank_1", images: ["https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=600&q=80","https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"] }
-            },
-            staff: {
-                staff_1: { name: "Kaveesha Udayanga", role: "Super Admin" }
+                prod_1: { name: "Ladies Casual Frock (TB-101)", price: "LKR 1,800 / Piece", stock: 100, details: "ප්‍රමාණ: S, M, L, XL | රෙදි: Pure Cotton | MOQ: Pcs 30", bankId: "bank_1", images: ["https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=600&q=80","https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80","https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80","https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80"] }
             }
         };
 
-        let siteInfo = cacheGet('siteInfo') || defaults.siteInfo;
+        let siteInfo = Object.assign({}, defaults.siteInfo, cacheGet('siteInfo') || {});
         let texts = Object.assign({}, defaults.texts, cacheGet('texts') || {});
         let contacts = cacheGet('contacts') || defaults.contacts;
         let banks = cacheGet('banks') || {};
         let products = cacheGet('products') || {};
-        let staff = cacheGet('staff') || defaults.staff;
+        let orders = cacheGet('orders') || {};
+        let coupons = cacheGet('coupons') || {};
+        let faqs = cacheGet('faqs') || {};
+        let banners = cacheGet('banners') || {};
+        let reviews = cacheGet('reviews') || {};
+        let messages = cacheGet('messages') || {};
+        let newsletter = cacheGet('newsletter') || {};
+        let admins = cacheGet('admins') || {};
+        let auditLog = cacheGet('auditLog') || {};
+        let errorLogs = cacheGet('errorLogs') || {};
+        let trash = cacheGet('trash') || {};
+        let masterPassword = cacheGet('masterPassword') || '0557954';
 
+        // Render immediately from cache (if any) so the page isn't blank while Firebase connects
         applySiteInfo();
         applyTexts();
         loadContactSettingsToForm();
         if (Object.keys(banks).length) { populateBankDropdown(); renderBankSummary(); }
         if (Object.keys(products).length) { renderProducts(); }
+        if (Object.keys(faqs).length) { renderFaqPublic(); }
         updateCartBadge();
 
+        // ---- Firebase connection status ----
         db.ref('.info/connected').on('value', (snap) => {
             const dot = document.getElementById('syncDot');
             const txt = document.getElementById('syncText');
@@ -426,37 +593,71 @@
             else { dot.classList.add('offline'); txt.innerText = 'Connecting...'; }
         });
 
-        db.ref('siteInfo').on('value', snap => { siteInfo = snap.val() || defaults.siteInfo; cacheSet('siteInfo', siteInfo); applySiteInfo(); });
+        // ---- Real-time listeners: any admin edit anywhere pushes to every visitor instantly ----
+        db.ref('siteInfo').on('value', snap => { siteInfo = Object.assign({}, defaults.siteInfo, snap.val() || {}); cacheSet('siteInfo', siteInfo); applySiteInfo(); });
         db.ref('texts').on('value', snap => { texts = Object.assign({}, defaults.texts, snap.val() || {}); cacheSet('texts', texts); applyTexts(); });
         db.ref('contacts').on('value', snap => { contacts = snap.val() || defaults.contacts; cacheSet('contacts', contacts); loadContactSettingsToForm(); });
+        db.ref('masterPassword').on('value', snap => { if (snap.val()) { masterPassword = snap.val(); cacheSet('masterPassword', masterPassword); } });
         db.ref('banks').on('value', snap => {
             banks = snap.val();
             if (!banks) { db.ref('banks').set(defaults.banks); banks = defaults.banks; }
             cacheSet('banks', banks);
-            populateBankDropdown(); renderBankSummary(); renderExistingBanks();
+            populateBankDropdown(); renderBankSummary(); renderExistingBanks(); renderProducts();
         });
         db.ref('products').on('value', snap => {
             products = snap.val();
             if (!products) { db.ref('products').set(defaults.products); products = defaults.products; }
             cacheSet('products', products);
             renderProducts(); renderExistingProducts();
-            document.getElementById('statProductsCount').innerText = Object.keys(products).length;
         });
-        db.ref('staff').on('value', snap => {
-            staff = snap.val() || defaults.staff;
-            cacheSet('staff', staff);
-            renderExistingStaff();
-            document.getElementById('statAdminsCount').innerText = Object.keys(staff).length;
+        db.ref('orders').on('value', snap => { orders = snap.val() || {}; cacheSet('orders', orders); renderOrdersList(); renderDashboard(); renderCustomersList(); });
+        db.ref('coupons').on('value', snap => { coupons = snap.val() || {}; cacheSet('coupons', coupons); renderCouponsList(); });
+        db.ref('faqs').on('value', snap => { faqs = snap.val() || {}; cacheSet('faqs', faqs); renderFaqAdminList(); renderFaqPublic(); });
+        db.ref('banners').on('value', snap => { banners = snap.val() || {}; cacheSet('banners', banners); renderBannerAdminList(); maybeShowBannerPopup(); });
+        db.ref('reviews').on('value', snap => { reviews = snap.val() || {}; cacheSet('reviews', reviews); renderReviewsAdminList(); if (currentDetailProductId) renderDetailReviews(currentDetailProductId); });
+        db.ref('messages').on('value', snap => { messages = snap.val() || {}; cacheSet('messages', messages); renderMessagesList(); renderCustomersList(); });
+        db.ref('newsletter').on('value', snap => { newsletter = snap.val() || {}; cacheSet('newsletter', newsletter); renderNewsletterList(); });
+        db.ref('admins').on('value', snap => { admins = snap.val() || {}; cacheSet('admins', admins); renderAdminsList(); });
+        db.ref('auditLog').on('value', snap => { auditLog = snap.val() || {}; cacheSet('auditLog', auditLog); renderAuditLog(); renderDashboard(); });
+        db.ref('errorLogs').on('value', snap => { errorLogs = snap.val() || {}; cacheSet('errorLogs', errorLogs); renderErrorLog(); });
+        db.ref('trash').on('value', snap => { trash = snap.val() || {}; cacheSet('trash', trash); renderTrashList(); });
+
+        // ---- Visitor counter (Dashboard stat) ----
+        (function trackVisit() {
+            const today = new Date().toISOString().slice(0,10);
+            const lastVisit = localStorage.getItem('tb_last_visit_date');
+            db.ref('stats/totalVisitors').transaction(v => (v || 0) + 1);
+            if (lastVisit !== today) {
+                db.ref('stats/dailyVisitors/' + today).transaction(v => (v || 0) + 1);
+                localStorage.setItem('tb_last_visit_date', today);
+            }
+        })();
+        db.ref('stats').on('value', snap => { window.tbStats = snap.val() || {}; renderDashboard(); });
+
+        // ---- Simple client-side error log ----
+        window.addEventListener('error', (e) => {
+            try { db.ref('errorLogs').push({ message: e.message, source: e.filename + ':' + e.lineno, time: new Date().toISOString() }); } catch(err) {}
         });
+
+        function logAction(action) {
+            db.ref('auditLog').push({ action: action, time: new Date().toISOString() });
+        }
 
         function applySiteInfo() {
             document.getElementById('brandNameDisplay').innerText = siteInfo.name;
-            document.getElementById('pageTitle').innerText = siteInfo.name;
+            document.getElementById('pageTitle').innerText = siteInfo.seoTitle || siteInfo.name;
+            const seoTag = document.getElementById('seoDescriptionTag');
+            if (seoTag) seoTag.setAttribute('content', siteInfo.seoDesc || siteInfo.name || '');
             const logoContainer = document.getElementById('brandHeaderLogoContainer');
             logoContainer.innerHTML = (siteInfo.logoUrl && siteInfo.logoUrl.trim() !== '')
                 ? `<img src="${siteInfo.logoUrl}" class="logo-img-preview" alt="Logo">`
                 : `<i class="fa-solid fa-shirt"></i>`;
             document.getElementById('settingSiteName').value = siteInfo.name || '';
+            document.getElementById('settingSeoTitle').value = siteInfo.seoTitle || '';
+            document.getElementById('settingSeoDesc').value = siteInfo.seoDesc || '';
+            document.getElementById('settingCurrency').value = siteInfo.currency || 'LKR';
+            document.getElementById('settingShippingFee').value = siteInfo.shippingFee || 0;
+            document.getElementById('settingTaxPercent').value = siteInfo.taxPercent || 0;
             const currentPreview = document.getElementById('settingLogoPreview');
             if (siteInfo.logoUrl) { currentPreview.src = siteInfo.logoUrl; currentPreview.style.display = 'block'; }
             else { currentPreview.style.display = 'none'; }
@@ -476,6 +677,7 @@
             document.getElementById('textLocationLabel').value = texts.locationLabel;
             document.getElementById('textOrderLabel').value = texts.orderLabel;
             document.getElementById('textFooter').value = texts.footer;
+            renderProducts();
         }
 
         async function saveGeneralSettings() {
@@ -484,9 +686,17 @@
             if (file) { logoUrl = await readFileAsBase64(file); }
             const updated = {
                 name: document.getElementById('settingSiteName').value || "TrendBlaze Wholesale Garments",
-                logoUrl: logoUrl
+                logoUrl: logoUrl,
+                seoTitle: document.getElementById('settingSeoTitle').value || '',
+                seoDesc: document.getElementById('settingSeoDesc').value || '',
+                currency: document.getElementById('settingCurrency').value || 'LKR',
+                shippingFee: Number(document.getElementById('settingShippingFee').value) || 0,
+                taxPercent: Number(document.getElementById('settingTaxPercent').value) || 0
             };
-            db.ref('siteInfo').set(updated).then(() => { alert('සාර්ථකව සුරකින ලදී!'); closeModal('adminModal'); });
+            db.ref('siteInfo').set(updated).then(() => {
+                logAction('General/SEO settings updated');
+                alert('සාර්ථකව සුරකින ලදී!'); closeModal('adminModal');
+            });
         }
 
         function saveTexts() {
@@ -528,7 +738,7 @@
 
         function renderExistingBanks() {
             const list = document.getElementById('existingBanksList');
-            list.innerHTML = '<p style="color:#ddd;font-size:0.85rem;margin-bottom:8px;">දැනට ඇති බැංකු:</p>';
+            list.innerHTML = '<p style="color:#ddd;font-size:0.85rem;margin-bottom:10px;">දැනට ඇති බැංකු:</p>';
             Object.keys(banks || {}).forEach(id => {
                 const b = banks[id];
                 const row = document.createElement('div');
@@ -545,7 +755,7 @@
 
         function renderExistingProducts() {
             const list = document.getElementById('existingProductsList');
-            list.innerHTML = '<p style="color:#ddd;font-size:0.85rem;margin-bottom:8px;">දැනට ඇති නිෂ්පාදන:</p>';
+            list.innerHTML = '<p style="color:#ddd;font-size:0.85rem;margin-bottom:10px;">දැනට ඇති නිෂ්පාදන:</p>';
             Object.keys(products || {}).forEach(id => {
                 const p = products[id];
                 const row = document.createElement('div');
@@ -556,36 +766,48 @@
         }
 
         function deleteProduct(id) {
-            if (!confirm('මෙම නිෂ්පාදනය මකන්නද?')) return;
-            db.ref('products/' + id).remove();
+            if (!confirm('මෙම නිෂ්පාදනය මකා Trash එකට යවන්නද? (Trash එකෙන් නැවත Restore කරන්න පුළුවන්)')) return;
+            const prod = products[id];
+            db.ref('trash/' + id).set(Object.assign({}, prod, { deletedAt: new Date().toISOString(), type: 'product' })).then(() => {
+                db.ref('products/' + id).remove();
+                logAction('නිෂ්පාදනයක් Trash එකට යවන ලදී: ' + (prod ? prod.name : id));
+            });
         }
 
-        function renderExistingStaff() {
-            const list = document.getElementById('existingStaffList');
-            if(!list) return;
-            list.innerHTML = '<p style="color:#ddd;font-size:0.85rem;margin-bottom:8px;">පරිපාලක මණ්ඩලය:</p>';
-            Object.keys(staff || {}).forEach(id => {
-                const s = staff[id];
+        function restoreFromTrash(id) {
+            const item = trash[id];
+            if (!item) return;
+            const clean = Object.assign({}, item);
+            delete clean.deletedAt; delete clean.type;
+            db.ref('products/' + id).set(clean).then(() => {
+                db.ref('trash/' + id).remove();
+                logAction('Trash එකෙන් නිෂ්පාදනයක් Restore කරන ලදී: ' + (item.name || id));
+                alert('Restore කරන ලදී!');
+            });
+        }
+
+        function permanentlyDeleteTrash(id) {
+            if (!confirm('මෙය සදහටම මකා දමන්නද? මෙය අහෝසි කළ නොහැක.')) return;
+            db.ref('trash/' + id).remove();
+            logAction('Trash එකෙන් සදහටම මකා දමන ලදී: ' + id);
+        }
+
+        function renderTrashList() {
+            const list = document.getElementById('trashList');
+            if (!list) return;
+            const keys = Object.keys(trash || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">Trash එක හිස්ය.</p>';
+            keys.forEach(id => {
+                const item = trash[id];
                 const row = document.createElement('div');
                 row.className = 'existing-item';
-                row.innerHTML = `<span>${s.name} (${s.role})</span><button onclick="deleteStaff('${id}')"><i class="fa-solid fa-trash"></i></button>`;
+                row.innerHTML = `<span>${item.name || id} <span class="recycle-tag">(${(item.deletedAt||'').slice(0,10)})</span></span>
+                    <span>
+                        <button onclick="restoreFromTrash('${id}')" title="Restore"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button onclick="permanentlyDeleteTrash('${id}')" title="සදහටම මකන්න"><i class="fa-solid fa-trash"></i></button>
+                    </span>`;
                 list.appendChild(row);
             });
-        }
-
-        function addNewStaffUser() {
-            const name = document.getElementById('newAdminName').value.trim();
-            const role = document.getElementById('newAdminRole').value;
-            if(!name) { alert('කරුණාකර නමක් ඇතුළත් කරන්න.'); return; }
-            db.ref('staff').push().set({ name, role }).then(() => {
-                alert('නව පරිපාලක සාර්ථකව එකතු කරන ලදී!');
-                document.getElementById('newAdminName').value = '';
-            });
-        }
-
-        function deleteStaff(id) {
-            if(!confirm('මෙම පරිපාලකවරයා ඉවත් කරන්නද?')) return;
-            db.ref('staff/' + id).remove();
         }
 
         function renderProducts() {
@@ -602,6 +824,7 @@
                 const bankInfo = (banks && banks[prod.bankId]) || Object.values(banks || {})[0] || {};
                 const bankLogoHtml = bankInfo.logoUrl ? `<img src="${bankInfo.logoUrl}" class="product-bank-logo">` : `<div class="product-bank-logo" style="display:flex;align-items:center;justify-content:center;"><i class="fa-solid fa-building-columns"></i></div>`;
 
+                const outOfStock = (prod.stock !== undefined && Number(prod.stock) <= 0);
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.onclick = () => openDetailModal(pId);
@@ -613,6 +836,8 @@
                     </div>
                     <div class="product-info">
                         <div>
+                            ${prod.stock !== undefined ? stockBadgeHtml(prod.stock) : ''}
+                            ${productRatingHtml(pId)}
                             <div class="product-name">${prod.name}</div>
                             <div class="product-price">${prod.price}</div>
                             <div class="product-details">${prod.details}</div>
@@ -625,9 +850,10 @@
                             </div>
                         </div>
                         <div class="card-actions">
+                            ${outOfStock ? `<span class="order-btn" style="background:#555;cursor:not-allowed;text-align:center;">තොග ඉවරයි</span>` : `
                             <a href="https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent('I want to order sample: ' + prod.name)}" target="_blank" class="order-btn" onclick="event.stopPropagation()">
                                 <i class="fa-brands fa-whatsapp"></i> ${texts.orderLabel}
-                            </a>
+                            </a>`}
                         </div>
                     </div>`;
                 grid.appendChild(card);
@@ -647,11 +873,13 @@
         }
 
         let currentDetailProductId = null;
+        let currentDetailImageIndex = 0;
 
         function openDetailModal(pId) {
             const prod = products[pId];
             if (!prod) return;
             currentDetailProductId = pId;
+            currentDetailImageIndex = 0;
             const bankInfo = (banks && banks[prod.bankId]) || Object.values(banks || {})[0] || {};
             document.getElementById('detailModalTitle').innerHTML = `<i class="fa-solid fa-shirt"></i> ${prod.name}`;
             document.getElementById('detailPrice').innerText = prod.price;
@@ -662,9 +890,63 @@
             document.getElementById('detailBankBox').innerHTML = `${bankLogoHtml}<div class="product-bank-text"><div>ගෙවීම් ක්‍රමය: <span>${bankInfo.bankName||''}</span></div><div>ගිණුම් අංකය: <span>${bankInfo.accNum||''}</span></div></div>`;
             document.getElementById('detailOrderBtn').href = `https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent('I want to order sample: ' + prod.name)}`;
             document.getElementById('detailOrderBtn').innerHTML = `<i class="fa-brands fa-whatsapp"></i> ${texts.orderLabel}`;
+            document.getElementById('detailStockBadge').innerHTML = prod.stock !== undefined ? stockBadgeHtml(prod.stock) : '';
+            const addCartBtn = document.getElementById('detailAddToCartBtn');
+            const outOfStock = (prod.stock !== undefined && Number(prod.stock) <= 0);
+            addCartBtn.style.opacity = outOfStock ? '0.5' : '1';
+            addCartBtn.style.pointerEvents = outOfStock ? 'none' : 'auto';
+            renderDetailReviews(pId);
             document.getElementById('detailModal').classList.add('active');
         }
 
+        // ---- Reviews on product detail ----
+        function renderDetailReviews(pId) {
+            const list = document.getElementById('detailReviewsList');
+            if (!list) return;
+            const approved = Object.values(reviews || {}).filter(r => r.productId === pId && r.approved);
+            list.innerHTML = approved.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම reviews නැත.</p>';
+            approved.forEach(r => {
+                const stars = '★'.repeat(Number(r.rating)) + '☆'.repeat(5 - Number(r.rating));
+                const div = document.createElement('div');
+                div.className = 'review-item';
+                div.innerHTML = `<div style="color:#ffd700;">${stars}</div><div style="font-weight:700;color:var(--light-pink);">${r.name}</div><div>${r.comment || ''}</div>`;
+                list.appendChild(div);
+            });
+        }
+
+        function submitReview() {
+            if (!currentDetailProductId) return;
+            const name = document.getElementById('reviewName').value.trim();
+            const rating = document.getElementById('reviewRating').value;
+            const comment = document.getElementById('reviewComment').value.trim();
+            if (!name) { alert('කරුණාකර ඔබේ නම ඇතුළත් කරන්න.'); return; }
+            db.ref('reviews').push().set({
+                productId: currentDetailProductId, name, rating: Number(rating), comment,
+                date: new Date().toISOString(), approved: false
+            }).then(() => {
+                alert('ස්තුතියි! ඔබේ review එක අනුමැතිය සඳහා යවන ලදී.');
+                document.getElementById('reviewName').value = '';
+                document.getElementById('reviewComment').value = '';
+            });
+        }
+
+        function moveDetailImage(direction) {
+            if (!currentDetailProductId) return;
+            const prod = products[currentDetailProductId];
+            if (!prod || !prod.images || prod.images.length < 2) return;
+            const imgs = document.querySelectorAll('#detailGallery img');
+            if (!imgs.length) return;
+            currentDetailImageIndex = (currentDetailImageIndex + direction + imgs.length) % imgs.length;
+            imgs.forEach((img, i) => img.classList.toggle('active', i === currentDetailImageIndex));
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('detailModal').classList.contains('active')) return;
+            if (e.key === 'ArrowLeft') moveDetailImage(-1);
+            if (e.key === 'ArrowRight') moveDetailImage(1);
+        });
+
+        // ---- Cart ----
         function getCart() { try { return JSON.parse(localStorage.getItem('tb_cart') || '[]'); } catch(e) { return []; } }
         function saveCart(cart) { localStorage.setItem('tb_cart', JSON.stringify(cart)); updateCartBadge(); }
 
@@ -741,9 +1023,14 @@
 
         function verifyPassword() {
             const pass = document.getElementById('adminPasswordInput').value;
-            if (pass === '0557954') {
+            const validPasswords = [masterPassword].concat(Object.values(admins || {}).map(a => a.password));
+            if (validPasswords.includes(pass)) {
                 document.getElementById('passwordModal').classList.remove('active');
                 document.getElementById('adminModal').classList.add('active');
+                renderDashboard(); renderOrdersList(); renderCouponsList(); renderFaqAdminList();
+                renderBannerAdminList(); renderReviewsAdminList(); renderMessagesList();
+                renderNewsletterList(); renderAdminsList(); renderCustomersList();
+                renderAuditLog(); renderErrorLog(); renderTrashList();
             } else {
                 document.getElementById('passwordError').style.display = 'block';
             }
@@ -779,25 +1066,45 @@
         async function addNewProduct() {
             const name = document.getElementById('prodName').value;
             const price = document.getElementById('prodPrice').value;
+            const stock = Number(document.getElementById('prodStock').value) || 0;
             const details = document.getElementById('prodDetails').value;
             const bankId = document.getElementById('prodBankSelect').value;
             if (!name || !price) { alert('කරුණාකර නිෂ්පාදනයේ නම සහ මිල ඇතුළත් කරන්න.'); return; }
-            const images = await Promise.all([1,2].map(async n => {
+            const images = await Promise.all([1,2,3,4].map(async n => {
                 const urlVal = document.getElementById('prodImgUrl'+n).value.trim();
                 if (urlVal) return urlVal;
                 const file = document.getElementById('prodImg'+n).files[0];
                 return readFileAsBase64(file);
             }));
             const newRef = db.ref('products').push();
-            newRef.set({ name, price, details: details || 'විස්තර ලබා දී නැත', bankId, images: images.filter(Boolean) }).then(() => {
+            newRef.set({ name, price, stock, details: details || 'විස්තර ලබා දී නැත', bankId, images }).then(() => {
+                logAction('නව නිෂ්පාදනයක් එකතු කරන ලදී: ' + name);
                 alert('නිෂ්පාදනය සාර්ථකව එකතු කරන ලදී!');
-                ['prodName','prodPrice','prodDetails'].forEach(id => document.getElementById(id).value = '');
-                [1,2].forEach(n => {
+                ['prodName','prodPrice','prodStock','prodDetails'].forEach(id => document.getElementById(id).value = '');
+                [1,2,3,4].forEach(n => {
                     document.getElementById('prodImg'+n).value = '';
                     document.getElementById('prodImgUrl'+n).value = '';
                     document.getElementById('prodImg'+n+'Preview').style.display = 'none';
                 });
             });
+        }
+
+        function stockBadgeHtml(stock) {
+            stock = Number(stock);
+            if (isNaN(stock)) return '';
+            if (stock <= 0) return `<span class="stock-badge stock-out">තොග ඉවරයි (Out of Stock)</span>`;
+            if (stock <= 10) return `<span class="stock-badge stock-low">තොගයේ ඉතිරි: ${stock} (Low Stock)</span>`;
+            return `<span class="stock-badge stock-in">තොගයේ තිබේ (${stock})</span>`;
+        }
+
+        function productRatingHtml(pId) {
+            const list = Object.values(reviews || {}).filter(r => r.productId === pId && r.approved);
+            if (!list.length) return '';
+            const avg = (list.reduce((s,r) => s + Number(r.rating), 0) / list.length);
+            const full = Math.round(avg);
+            let stars = '';
+            for (let i=1;i<=5;i++) stars += i <= full ? '★' : '☆';
+            return `<div class="star-rating">${stars}<span class="rcount">(${list.length} reviews)</span></div>`;
         }
 
         function loadContactSettingsToForm() {
@@ -815,26 +1122,596 @@
             db.ref('contacts').set(updated).then(() => { alert('සම්බන්ධතා විස්තර සාර්ථකව යාවත්කාලීන කරන ලදී!'); closeModal('adminModal'); });
         }
 
-        function saveMarketingSettings() {
-            alert('අලෙවිකරණ සහ පොප්-අප් සැකසුම් සුරකින ලදී!');
-        }
-
-        function downloadDatabaseBackup() {
-            const backupData = { siteInfo, texts, contacts, banks, products, staff };
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
-            const dlAnchorElem = document.createElement('a');
-            dlAnchorElem.setAttribute("href", dataStr);
-            dlAnchorElem.setAttribute("download", "trendblaze_backup.json");
-            dlAnchorElem.click();
-        }
-
-        function clearTrashBin() {
-            alert('ඉවත් කළ දත්ත ගොනුව හිස් කරන ලදී (Trash Cleaned).');
-        }
-
         function openWhatsApp() { window.open(`https://wa.me/${contacts.whatsapp}`, '_blank'); }
         function makeCall() { window.location.href = `tel:${contacts.phone}`; }
         function openLocation() { window.open(contacts.location, '_blank'); }
+
+        // ============================================================
+        // ================  CHECKOUT / ORDERS  ========================
+        // ============================================================
+        function findCoupon(code) {
+            if (!code) return null;
+            code = code.trim().toUpperCase();
+            const found = Object.entries(coupons || {}).find(([id, c]) => (c.code || '').toUpperCase() === code);
+            if (!found) return null;
+            const [id, c] = found;
+            if (!c.active) return null;
+            if (c.expiry && new Date(c.expiry) < new Date(new Date().toDateString())) return null;
+            return c;
+        }
+
+        function parsePriceNumber(priceStr) {
+            const match = String(priceStr || '').match(/[\d,]+(\.\d+)?/);
+            if (!match) return 0;
+            return Number(match[0].replace(/,/g, '')) || 0;
+        }
+
+        function computeCartTotals(couponCode) {
+            const cart = getCart();
+            const subtotal = cart.reduce((s, item) => s + parsePriceNumber(item.price), 0);
+            const coupon = findCoupon(couponCode);
+            const discount = coupon ? Math.round(subtotal * (Number(coupon.percent) / 100)) : 0;
+            const shippingFee = Number(siteInfo.shippingFee) || 0;
+            const taxable = subtotal - discount;
+            const tax = Math.round(taxable * (Number(siteInfo.taxPercent) || 0) / 100);
+            const total = taxable + tax + shippingFee;
+            return { cart, subtotal, coupon, discount, shippingFee, tax, total, currency: siteInfo.currency || 'LKR' };
+        }
+
+        function openCheckoutModal() {
+            const cart = getCart();
+            if (cart.length === 0) { alert('කරුණාකර අවම වශයෙන් නිෂ්පාදනයක්වත් කාට් එකට එකතු කරන්න.'); return; }
+            document.getElementById('checkoutCoupon').value = '';
+            updateCheckoutSummary();
+            document.getElementById('checkoutModal').classList.add('active');
+        }
+
+        function updateCheckoutSummary() {
+            const couponCode = document.getElementById('checkoutCoupon').value;
+            const t = computeCartTotals(couponCode);
+            const box = document.getElementById('checkoutSummary');
+            box.innerHTML = `
+                <div>අයිතම (${t.cart.length}): ${t.currency} ${t.subtotal.toLocaleString()}</div>
+                ${t.coupon ? `<div style="color:#4cd137;">වට්ටම (${t.coupon.percent}%): -${t.currency} ${t.discount.toLocaleString()}</div>` : (couponCode ? `<div style="color:#ff6b81;">කූපන් කේතය වලංගු නැත</div>` : '')}
+                ${t.shippingFee ? `<div>නැව්ගත කිරීමේ ගාස්තුව: ${t.currency} ${t.shippingFee.toLocaleString()}</div>` : ''}
+                ${t.tax ? `<div>බදු: ${t.currency} ${t.tax.toLocaleString()}</div>` : ''}
+                <div style="font-weight:700;color:var(--light-pink);margin-top:6px;font-size:1.05rem;">මුළු එකතුව: ${t.currency} ${t.total.toLocaleString()}</div>`;
+        }
+
+        function submitOrder() {
+            const name = document.getElementById('checkoutName').value.trim();
+            const phone = document.getElementById('checkoutPhone').value.trim();
+            const address = document.getElementById('checkoutAddress').value.trim();
+            if (!name || !phone) { alert('කරුණාකර නම සහ දුරකථන අංකය ඇතුළත් කරන්න.'); return; }
+            if (blockedCustomers && blockedCustomers[phone]) { alert('ඔබගේ ගිණුමට ඇණවුම් කිරීමට අවසර නැත. කරුණාකර අප හා සම්බන්ධ වන්න.'); return; }
+            const couponCode = document.getElementById('checkoutCoupon').value.trim();
+            const t = computeCartTotals(couponCode);
+            const orderRef = db.ref('orders').push();
+            const orderData = {
+                name, phone, address,
+                items: t.cart,
+                couponCode: t.coupon ? couponCode : '',
+                subtotal: t.subtotal, discount: t.discount, shippingFee: t.shippingFee, tax: t.tax, total: t.total,
+                currency: t.currency,
+                status: 'pending',
+                date: new Date().toISOString()
+            };
+            orderRef.set(orderData).then(() => {
+                // Deduct stock
+                t.cart.forEach(item => {
+                    if (products[item.id] && products[item.id].stock !== undefined) {
+                        db.ref('products/' + item.id + '/stock').transaction(v => Math.max(0, (v || 0) - 1));
+                    }
+                });
+                // Loyalty points: 1 point per 100 currency units spent
+                db.ref('loyalty/' + phone.replace(/[^0-9]/g,'')).transaction(v => (v || 0) + Math.floor(t.total / 100));
+                logAction(`නව ඇණවුමක්: ${name} (${t.currency} ${t.total.toLocaleString()})`);
+                saveCart([]);
+                closeModal('checkoutModal');
+                closeModal('cartModal');
+                let msg = `New Order:\n\n${t.cart.map((it,i)=>`${i+1}. ${it.name} - ${it.price}`).join('\n')}\n\nTotal: ${t.currency} ${t.total.toLocaleString()}\nName: ${name}\nPhone: ${phone}\nAddress: ${address}`;
+                alert('ඔබගේ ඇණවුම සාර්ථකව ලැබුණි! WhatsApp හරහා තහවුරු කිරීමට ඉදිරියට යන්න.');
+                window.open(`https://wa.me/${contacts.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+            });
+        }
+
+        function renderOrdersList() {
+            const list = document.getElementById('ordersList');
+            if (!list) return;
+            const keys = Object.keys(orders || {}).sort((a,b) => (orders[b].date||'').localeCompare(orders[a].date||''));
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම ඇණවුම් නැත.</p>';
+            keys.forEach(id => {
+                const o = orders[id];
+                const div = document.createElement('div');
+                div.className = 'order-card';
+                div.innerHTML = `
+                    <div class="oc-top">
+                        <span style="font-weight:700;">${o.name} <span style="color:#bbb;font-weight:400;">(${o.phone})</span></span>
+                        <span class="status-badge status-${o.status}">${o.status}</span>
+                    </div>
+                    <div>${(o.items||[]).map(it => it.name).join(', ')}</div>
+                    <div style="margin:6px 0;color:#ddd;">${o.address || ''}</div>
+                    <div style="font-weight:700;color:var(--light-pink);">${o.currency||'LKR'} ${(o.total||0).toLocaleString()} ${o.couponCode ? `(කූපන්: ${o.couponCode})` : ''}</div>
+                    <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                        <select class="form-control" onchange="updateOrderStatus('${id}', this.value)">
+                            ${['pending','confirmed','shipped','delivered','cancelled'].map(s => `<option value="${s}" ${o.status===s?'selected':''}>${s}</option>`).join('')}
+                        </select>
+                        <button onclick="deleteOrder('${id}')" style="background:none;border:none;color:#ff6b81;cursor:pointer;"><i class="fa-solid fa-trash"></i></button>
+                    </div>`;
+                list.appendChild(div);
+            });
+        }
+
+        function updateOrderStatus(id, status) {
+            db.ref('orders/' + id + '/status').set(status).then(() => logAction(`Order ${id} status → ${status}`));
+        }
+
+        function deleteOrder(id) {
+            if (!confirm('මෙම ඇණවුම මකන්නද?')) return;
+            db.ref('orders/' + id).remove();
+        }
+
+        // ============================================================
+        // ================  DASHBOARD / REPORTS  ======================
+        // ============================================================
+        function renderDashboard() {
+            const grid = document.getElementById('dashboardStatsGrid');
+            if (!grid) return;
+            const stats = window.tbStats || {};
+            const today = new Date().toISOString().slice(0,10);
+            const totalOrders = Object.keys(orders || {}).length;
+            const totalSales = Object.values(orders || {}).filter(o => o.status !== 'cancelled').reduce((s,o) => s + (Number(o.total)||0), 0);
+            const todaySales = Object.values(orders || {}).filter(o => (o.date||'').slice(0,10) === today && o.status !== 'cancelled').reduce((s,o) => s + (Number(o.total)||0), 0);
+            const pendingOrders = Object.values(orders || {}).filter(o => o.status === 'pending').length;
+            // top product by order count
+            const prodCount = {};
+            Object.values(orders || {}).forEach(o => (o.items||[]).forEach(it => { prodCount[it.name] = (prodCount[it.name]||0)+1; }));
+            const topProduct = Object.entries(prodCount).sort((a,b) => b[1]-a[1])[0];
+            grid.innerHTML = `
+                <div class="dash-card"><div class="num">${stats.totalVisitors || 0}</div><div class="lbl">මුළු Visitors</div></div>
+                <div class="dash-card"><div class="num">${(stats.dailyVisitors && stats.dailyVisitors[today]) || 0}</div><div class="lbl">අද Visitors</div></div>
+                <div class="dash-card"><div class="num">${totalOrders}</div><div class="lbl">මුළු ඇණවුම්</div></div>
+                <div class="dash-card"><div class="num">${pendingOrders}</div><div class="lbl">Pending ඇණවුම්</div></div>
+                <div class="dash-card"><div class="num">${(siteInfo.currency||'LKR')} ${todaySales.toLocaleString()}</div><div class="lbl">අද විකුණුම්</div></div>
+                <div class="dash-card"><div class="num">${(siteInfo.currency||'LKR')} ${totalSales.toLocaleString()}</div><div class="lbl">මුළු විකුණුම්</div></div>
+                <div class="dash-card"><div class="num" style="font-size:1rem;">${topProduct ? topProduct[0] : '-'}</div><div class="lbl">වැඩිම අලෙවි නිෂ්පාදනය</div></div>
+            `;
+            const activity = document.getElementById('dashboardActivityList');
+            if (activity) {
+                const entries = Object.values(auditLog || {}).sort((a,b) => (b.time||'').localeCompare(a.time||'')).slice(0,15);
+                activity.innerHTML = entries.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම activity නැත.</p>';
+                entries.forEach(e => {
+                    const row = document.createElement('div');
+                    row.className = 'mini-list-item';
+                    row.innerHTML = `<span>${e.action}</span><span style="color:#999;">${(e.time||'').replace('T',' ').slice(0,16)}</span>`;
+                    activity.appendChild(row);
+                });
+            }
+        }
+
+        // ============================================================
+        // ================  COUPONS  ===================================
+        // ============================================================
+        function addCoupon() {
+            const code = document.getElementById('couponCode').value.trim();
+            const percent = Number(document.getElementById('couponPercent').value);
+            const expiry = document.getElementById('couponExpiry').value;
+            if (!code || !percent) { alert('කරුණාකර කූපන් කේතය සහ ප්‍රතිශතය ඇතුළත් කරන්න.'); return; }
+            db.ref('coupons').push().set({ code: code.toUpperCase(), percent, expiry, active: true }).then(() => {
+                logAction('නව කූපනයක් එකතු කරන ලදී: ' + code);
+                alert('කූපනය සුරකින ලදී!');
+                document.getElementById('couponCode').value = '';
+                document.getElementById('couponPercent').value = '';
+                document.getElementById('couponExpiry').value = '';
+            });
+        }
+
+        function toggleCoupon(id, active) {
+            db.ref('coupons/' + id + '/active').set(active);
+        }
+
+        function deleteCoupon(id) {
+            if (!confirm('මෙම කූපනය මකන්නද?')) return;
+            db.ref('coupons/' + id).remove();
+        }
+
+        function renderCouponsList() {
+            const list = document.getElementById('existingCouponsList');
+            if (!list) return;
+            const keys = Object.keys(coupons || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම කූපන් නැත.</p>';
+            keys.forEach(id => {
+                const c = coupons[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${c.code} - ${c.percent}% ${c.expiry ? '(expires '+c.expiry+')' : ''} ${!c.active ? '<span style="color:#ff6b81;">(inactive)</span>' : ''}</span>
+                    <span>
+                        <button onclick="toggleCoupon('${id}', ${!c.active})" title="Toggle"><i class="fa-solid fa-toggle-${c.active?'on':'off'}"></i></button>
+                        <button onclick="deleteCoupon('${id}')"><i class="fa-solid fa-trash"></i></button>
+                    </span>`;
+                list.appendChild(row);
+            });
+        }
+
+        // ============================================================
+        // ================  FAQ  ========================================
+        // ============================================================
+        function addFaq() {
+            const question = document.getElementById('faqQuestion').value.trim();
+            const answer = document.getElementById('faqAnswer').value.trim();
+            if (!question || !answer) { alert('කරුණාකර ප්‍රශ්නය සහ පිළිතුර ඇතුළත් කරන්න.'); return; }
+            db.ref('faqs').push().set({ question, answer }).then(() => {
+                logAction('නව FAQ එකතු කරන ලදී');
+                document.getElementById('faqQuestion').value = '';
+                document.getElementById('faqAnswer').value = '';
+            });
+        }
+
+        function deleteFaq(id) {
+            if (!confirm('මෙම FAQ එක මකන්නද?')) return;
+            db.ref('faqs/' + id).remove();
+        }
+
+        function renderFaqAdminList() {
+            const list = document.getElementById('existingFaqList');
+            if (!list) return;
+            const keys = Object.keys(faqs || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම FAQ නැත.</p>';
+            keys.forEach(id => {
+                const f = faqs[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${f.question}</span><button onclick="deleteFaq('${id}')"><i class="fa-solid fa-trash"></i></button>`;
+                list.appendChild(row);
+            });
+        }
+
+        function renderFaqPublic() {
+            const section = document.getElementById('faqSection');
+            const list = document.getElementById('faqPublicList');
+            const keys = Object.keys(faqs || {});
+            if (!keys.length) { section.style.display = 'none'; return; }
+            section.style.display = 'block';
+            list.innerHTML = '';
+            keys.forEach(id => {
+                const f = faqs[id];
+                const item = document.createElement('div');
+                item.className = 'faq-item';
+                item.innerHTML = `<div class="faq-question" onclick="this.parentElement.classList.toggle('open')">${f.question} <i class="fa-solid fa-chevron-down"></i></div><div class="faq-answer">${f.answer}</div>`;
+                list.appendChild(item);
+            });
+        }
+
+        // ============================================================
+        // ================  BANNERS  =====================================
+        // ============================================================
+        async function addBanner() {
+            const urlVal = document.getElementById('bannerImgUrl').value.trim();
+            let imageUrl = urlVal;
+            if (!imageUrl) {
+                const file = document.getElementById('bannerImgFile').files[0];
+                imageUrl = await readFileAsBase64(file);
+            }
+            const text = document.getElementById('bannerText').value.trim();
+            const active = document.getElementById('bannerActive').checked;
+            if (!imageUrl && !text) { alert('කරුණාකර පින්තූරයක් හෝ පණිවිඩයක් ඇතුළත් කරන්න.'); return; }
+            db.ref('banners').push().set({ imageUrl, text, active }).then(() => {
+                logAction('නව බැනරයක් එකතු කරන ලදී');
+                document.getElementById('bannerImgUrl').value = '';
+                document.getElementById('bannerText').value = '';
+                document.getElementById('bannerImgFile').value = '';
+                document.getElementById('bannerImgPreview').style.display = 'none';
+            });
+        }
+
+        function toggleBanner(id, active) {
+            db.ref('banners/' + id + '/active').set(active);
+        }
+
+        function deleteBanner(id) {
+            if (!confirm('මෙම බැනරය මකන්නද?')) return;
+            db.ref('banners/' + id).remove();
+        }
+
+        function renderBannerAdminList() {
+            const list = document.getElementById('existingBannerList');
+            if (!list) return;
+            const keys = Object.keys(banners || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම බැනර් නැත.</p>';
+            keys.forEach(id => {
+                const b = banners[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${b.text || '(no text)'} ${!b.active ? '<span style="color:#ff6b81;">(inactive)</span>' : ''}</span>
+                    <span>
+                        <button onclick="toggleBanner('${id}', ${!b.active})"><i class="fa-solid fa-toggle-${b.active?'on':'off'}"></i></button>
+                        <button onclick="deleteBanner('${id}')"><i class="fa-solid fa-trash"></i></button>
+                    </span>`;
+                list.appendChild(row);
+            });
+        }
+
+        function maybeShowBannerPopup() {
+            const activeBanners = Object.values(banners || {}).filter(b => b.active);
+            if (!activeBanners.length) return;
+            const seenKey = 'tb_banner_seen_' + new Date().toISOString().slice(0,10);
+            if (sessionStorage.getItem(seenKey)) return;
+            const b = activeBanners[0];
+            const img = document.getElementById('bannerPopupImg');
+            if (b.imageUrl) { img.src = b.imageUrl; img.style.display = 'block'; } else { img.style.display = 'none'; }
+            document.getElementById('bannerPopupText').innerText = b.text || '';
+            document.getElementById('bannerPopupModal').classList.add('active');
+            sessionStorage.setItem(seenKey, '1');
+        }
+
+        // ============================================================
+        // ================  REVIEWS (admin)  ============================
+        // ============================================================
+        function approveReview(id) { db.ref('reviews/' + id + '/approved').set(true).then(() => logAction('Review එකක් අනුමත කරන ලදී')); }
+        function deleteReview(id) {
+            if (!confirm('මෙම review එක මකන්නද?')) return;
+            db.ref('reviews/' + id).remove();
+        }
+
+        function renderReviewsAdminList() {
+            const list = document.getElementById('reviewsList');
+            if (!list) return;
+            const keys = Object.keys(reviews || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම reviews නැත.</p>';
+            keys.forEach(id => {
+                const r = reviews[id];
+                const prodName = (products[r.productId] || {}).name || r.productId;
+                const stars = '★'.repeat(Number(r.rating)) + '☆'.repeat(5-Number(r.rating));
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${r.name} → ${prodName}: <span style="color:#ffd700;">${stars}</span> "${r.comment||''}" ${!r.approved ? '<span style="color:#ffa502;">(pending)</span>' : '<span style="color:#4cd137;">(approved)</span>'}</span>
+                    <span>
+                        ${!r.approved ? `<button onclick="approveReview('${id}')" title="Approve"><i class="fa-solid fa-check" style="color:#4cd137;"></i></button>` : ''}
+                        <button onclick="deleteReview('${id}')"><i class="fa-solid fa-trash"></i></button>
+                    </span>`;
+                list.appendChild(row);
+            });
+        }
+
+        // ============================================================
+        // ================  MESSAGES (contact form)  ===================
+        // ============================================================
+        function submitContactMessage() {
+            const name = document.getElementById('msgName').value.trim();
+            const phone = document.getElementById('msgPhone').value.trim();
+            const message = document.getElementById('msgText').value.trim();
+            if (!name || !message) { alert('කරුණාකර නම සහ පණිවිඩය ඇතුළත් කරන්න.'); return; }
+            db.ref('messages').push().set({ name, phone, message, date: new Date().toISOString(), read: false }).then(() => {
+                alert('ඔබගේ පණිවිඩය සාර්ථකව යවන ලදී!');
+                document.getElementById('msgName').value = '';
+                document.getElementById('msgPhone').value = '';
+                document.getElementById('msgText').value = '';
+                closeModal('contactFormModal');
+            });
+        }
+
+        function markMessageRead(id) { db.ref('messages/' + id + '/read').set(true); }
+        function deleteMessage(id) {
+            if (!confirm('මෙම පණිවිඩය මකන්නද?')) return;
+            db.ref('messages/' + id).remove();
+        }
+
+        function renderMessagesList() {
+            const list = document.getElementById('messagesList');
+            if (!list) return;
+            const keys = Object.keys(messages || {}).sort((a,b) => (messages[b].date||'').localeCompare(messages[a].date||''));
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම පණිවිඩ නැත.</p>';
+            keys.forEach(id => {
+                const m = messages[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${!m.read ? '<span class="badge-count">NEW</span>' : ''} <strong>${m.name}</strong> (${m.phone||'-'}): ${m.message}</span>
+                    <span>
+                        ${!m.read ? `<button onclick="markMessageRead('${id}')" title="Mark Read"><i class="fa-solid fa-envelope-open"></i></button>` : ''}
+                        <button onclick="deleteMessage('${id}')"><i class="fa-solid fa-trash"></i></button>
+                    </span>`;
+                list.appendChild(row);
+            });
+        }
+
+        // ============================================================
+        // ================  NEWSLETTER  ==================================
+        // ============================================================
+        function subscribeNewsletter() {
+            const emailInput = document.getElementById('newsletterEmailInput') || document.getElementById('newsletterEmail');
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@')) { alert('කරුණාකර වලංගු Email ලිපිනයක් ඇතුළත් කරන්න.'); return; }
+            const existing = Object.values(newsletter || {}).find(n => n.email.toLowerCase() === email.toLowerCase());
+            if (existing) { alert('ඔබ දැනටමත් register වී ඇත!'); return; }
+            db.ref('newsletter').push().set({ email, date: new Date().toISOString() }).then(() => {
+                alert('ස්තුතියි! ඔබ සාර්ථකව register වී ඇත.');
+                emailInput.value = '';
+            });
+        }
+
+        function deleteNewsletterSub(id) {
+            if (!confirm('මකන්නද?')) return;
+            db.ref('newsletter/' + id).remove();
+        }
+
+        function copyNewsletterEmails() {
+            const emails = Object.values(newsletter || {}).map(n => n.email).join(', ');
+            if (!emails) { alert('Emails කිසිවක් නැත.'); return; }
+            navigator.clipboard.writeText(emails).then(() => alert('Emails copy කරන ලදී!')).catch(() => alert(emails));
+        }
+
+        function renderNewsletterList() {
+            const list = document.getElementById('newsletterList');
+            if (!list) return;
+            const keys = Object.keys(newsletter || {});
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම subscribers නැත.</p>';
+            keys.forEach(id => {
+                const n = newsletter[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${n.email}</span><button onclick="deleteNewsletterSub('${id}')"><i class="fa-solid fa-trash"></i></button>`;
+                list.appendChild(row);
+            });
+        }
+
+        // ============================================================
+        // ================  ADMINS & CUSTOMERS  ==========================
+        // ============================================================
+        function addAdminUser() {
+            const username = document.getElementById('newAdminUser').value.trim();
+            const password = document.getElementById('newAdminPass').value.trim();
+            if (!username || !password) { alert('කරුණාකර Username සහ Password ඇතුළත් කරන්න.'); return; }
+            db.ref('admins').push().set({ username, password }).then(() => {
+                logAction('නව admin account එකතු කරන ලදී: ' + username);
+                alert('Admin account එකතු කරන ලදී!');
+                document.getElementById('newAdminUser').value = '';
+                document.getElementById('newAdminPass').value = '';
+            });
+        }
+
+        function deleteAdminUser(id) {
+            if (!confirm('මෙම admin account එක ඉවත් කරන්නද?')) return;
+            db.ref('admins/' + id).remove();
+        }
+
+        function renderAdminsList() {
+            const list = document.getElementById('existingAdminsList');
+            if (!list) return;
+            const keys = Object.keys(admins || {});
+            list.innerHTML = keys.length ? '<p style="color:#ddd;font-size:0.85rem;margin-bottom:10px;">දැනට ඇති Admins:</p>' : '<p style="color:#bbb;font-size:0.85rem;">Master password හැරෙන්නට වෙනත් admins නැත.</p>';
+            keys.forEach(id => {
+                const a = admins[id];
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${a.username}</span><button onclick="deleteAdminUser('${id}')"><i class="fa-solid fa-trash"></i></button>`;
+                list.appendChild(row);
+            });
+        }
+
+        let blockedCustomers = {};
+        let loyaltyPoints = {};
+        db.ref('blockedCustomers').on('value', snap => { blockedCustomers = snap.val() || {}; renderCustomersList(); });
+        db.ref('loyalty').on('value', snap => { loyaltyPoints = snap.val() || {}; renderCustomersList(); });
+
+        function toggleBlockCustomer(phone, block) {
+            const key = phone.replace(/[^0-9]/g, '');
+            if (block) db.ref('blockedCustomers/' + key).set(true);
+            else db.ref('blockedCustomers/' + key).remove();
+            logAction((block ? 'Blocked' : 'Unblocked') + ' customer: ' + phone);
+        }
+
+        function renderCustomersList() {
+            const list = document.getElementById('customersList');
+            if (!list) return;
+            const customerMap = {};
+            Object.values(orders || {}).forEach(o => { if (o.phone) customerMap[o.phone] = { name: o.name, phone: o.phone, orders: (customerMap[o.phone]?.orders||0)+1 }; });
+            Object.values(messages || {}).forEach(m => { if (m.phone && !customerMap[m.phone]) customerMap[m.phone] = { name: m.name, phone: m.phone, orders: 0 }; });
+            const keys = Object.keys(customerMap);
+            list.innerHTML = keys.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම පාරිභෝගිකයින් නැත.</p>';
+            keys.forEach(phone => {
+                const c = customerMap[phone];
+                const key = phone.replace(/[^0-9]/g, '');
+                const isBlocked = blockedCustomers && blockedCustomers[key];
+                const points = (loyaltyPoints && loyaltyPoints[key]) || 0;
+                const row = document.createElement('div');
+                row.className = 'existing-item';
+                row.innerHTML = `<span>${c.name} (${c.phone}) - ${c.orders} orders - ${points} pts ${isBlocked ? '<span style="color:#ff6b81;">(Blocked)</span>' : ''}</span>
+                    <button onclick="toggleBlockCustomer('${phone}', ${!isBlocked})" title="${isBlocked ? 'Unblock' : 'Block'}"><i class="fa-solid fa-${isBlocked ? 'unlock' : 'ban'}"></i></button>`;
+                list.appendChild(row);
+            });
+        }
+
+        // ============================================================
+        // ================  SECURITY & BACKUP  ============================
+        // ============================================================
+        function changeMasterPassword() {
+            const newPass = document.getElementById('newMasterPassword').value.trim();
+            if (!newPass || newPass.length < 4) { alert('කරුණාකර අවම වශයෙන් අකුරු 4ක්වත් ඇති password එකක් ඇතුළත් කරන්න.'); return; }
+            db.ref('masterPassword').set(newPass).then(() => {
+                logAction('ප්‍රධාන admin password එක වෙනස් කරන ලදී');
+                alert('රහස් කේතය සාර්ථකව වෙනස් කරන ලදී!');
+                document.getElementById('newMasterPassword').value = '';
+            });
+        }
+
+        function downloadBackup() {
+            const fullBackup = {
+                siteInfo, texts, contacts, banks, products, orders, coupons, faqs,
+                banners, reviews, messages, newsletter, admins,
+                exportedAt: new Date().toISOString()
+            };
+            const blob = new Blob([JSON.stringify(fullBackup, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `trendblaze-backup-${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            logAction('දත්ත Backup එකක් බාගත කරන ලදී');
+        }
+
+        function restoreBackup() {
+            const file = document.getElementById('restoreFile').files[0];
+            if (!file) { alert('කරුණාකර Backup JSON file එකක් තෝරන්න.'); return; }
+            if (!confirm('Backup එක Restore කිරීම දැනට ඇති දත්ත උඩින් ලියනු ලබයි. ඉදිරියට යන්නද?')) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    const updates = {};
+                    ['siteInfo','texts','contacts','banks','products','orders','coupons','faqs','banners','reviews','messages','newsletter','admins'].forEach(key => {
+                        if (data[key] !== undefined) updates['/' + key] = data[key];
+                    });
+                    db.ref().update(updates).then(() => {
+                        logAction('දත්ත Backup එකකින් Restore කරන ලදී');
+                        alert('සාර්ථකව Restore කරන ලදී!');
+                    });
+                } catch (err) {
+                    alert('Backup file එක කියවීමට නොහැකි විය. වලංගු JSON file එකක්ද කියා පරීක්ෂා කරන්න.');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function renderAuditLog() {
+            const list = document.getElementById('auditLogList');
+            if (!list) return;
+            const entries = Object.values(auditLog || {}).sort((a,b) => (b.time||'').localeCompare(a.time||'')).slice(0,50);
+            list.innerHTML = entries.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">තවම log නැත.</p>';
+            entries.forEach(e => {
+                const row = document.createElement('div');
+                row.className = 'mini-list-item';
+                row.innerHTML = `<span>${e.action}</span><span style="color:#999;">${(e.time||'').replace('T',' ').slice(0,16)}</span>`;
+                list.appendChild(row);
+            });
+        }
+
+        function renderErrorLog() {
+            const list = document.getElementById('errorLogList');
+            if (!list) return;
+            const entries = Object.values(errorLogs || {}).sort((a,b) => (b.time||'').localeCompare(a.time||'')).slice(0,30);
+            list.innerHTML = entries.length ? '' : '<p style="color:#bbb;font-size:0.85rem;">Errors කිසිවක් වාර්තා වී නැත.</p>';
+            entries.forEach(e => {
+                const row = document.createElement('div');
+                row.className = 'mini-list-item';
+                row.innerHTML = `<span>${e.message}</span><span style="color:#999;">${(e.time||'').replace('T',' ').slice(0,16)}</span>`;
+                list.appendChild(row);
+            });
+        }
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6a72ca4ae189971d4550d8eb/1jv86cdjh';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
